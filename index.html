@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Pieza de inteligencia estratégica preparada para AGRANA Fruit México, S.A. de C.V.">
+<title>AGRANA Fruit México · Análisis preparado por London Consulting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  Tipografía: el design system de LCG especifica DIN 2014 para cifras y metadata.
+  Los archivos DIN 2014 disponibles en el proyecto son builds demo de Fontspring con
+  cobertura de glifos incompleta (falta al menos '#'), así que --font-numeric apunta a
+  Manrope con tabular-nums. Sustituir por DIN 2014 licenciado en producción: basta
+  cambiar la declaración de --font-numeric y cargar la familia.
+-->
+<style>
+:root{
+  --london-green-dark:#085E54; --london-green:#03B585; --london-mint:#BAF4E9; --london-cream:#F2EEEB;
+  --lime:#C9E265;
+  --green-900:#073E38; --green-800:#085E54; --green-700:#0A7568; --green-600:#039271;
+  --green-500:#03B585; --green-400:#2FCB9E; --green-300:#7FE0C0; --green-200:#BAF4E9; --green-100:#DFF9F0;
+  --neutral-0:#FFFEFC; --neutral-50:#F2EEEB; --neutral-100:#E9E3DC; --neutral-200:#DCD4C9;
+  --neutral-300:#C2B8AB; --neutral-400:#9A9086; --neutral-500:#756C63; --neutral-600:#574F49;
+  --neutral-700:#3D3733; --neutral-800:#272320; --neutral-900:#171512;
+  --color-warning:#C98A1F; --color-warning-bg:#FBEED9; --color-error:#C0503F; --color-info:#2E7FB8;
+  --surface-page:var(--neutral-50); --surface-card:var(--neutral-0); --surface-sunken:var(--neutral-100);
+  --surface-dark:var(--green-800); --surface-dark-elevated:var(--green-900);
+  --text-primary:var(--neutral-800); --text-secondary:var(--neutral-500); --text-muted:var(--neutral-400);
+  --text-on-dark:var(--neutral-50); --text-on-dark-muted:var(--green-300);
+  --text-brand:var(--green-600); --text-link:var(--green-700);
+  --border-subtle:var(--neutral-200); --border-default:var(--neutral-300);
+  --border-on-dark:rgba(242,238,235,.18);
+  --font-sans:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --font-numeric:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --text-xs:13px; --text-sm:15px; --text-base:17px; --text-md:20px; --text-lg:25px;
+  --text-xl:32px; --text-2xl:40px; --text-3xl:52px; --text-4xl:68px; --text-5xl:88px;
+  --leading-tight:1.08; --leading-snug:1.25; --leading-normal:1.5; --leading-relaxed:1.65;
+  --tracking-tight:-.02em; --tracking-wide:.04em; --tracking-wider:.12em;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px;
+  --radius-sm:6px; --radius-md:10px; --radius-lg:16px; --radius-xl:24px; --radius-pill:999px;
+  --container-max:1180px;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --shadow-color:30 20% 20%;
+  --shadow-sm:0 1px 2px hsl(var(--shadow-color)/.06),0 1px 1px hsl(var(--shadow-color)/.04);
+  --shadow-md:0 4px 10px hsl(var(--shadow-color)/.08),0 1px 2px hsl(var(--shadow-color)/.06);
+  --shadow-lg:0 16px 32px hsl(var(--shadow-color)/.12),0 2px 6px hsl(var(--shadow-color)/.08);
+  --bar-top:56px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+html,body{margin:0;padding:0;background:var(--surface-page);color:var(--text-primary);
+  font-family:var(--font-sans);font-size:var(--text-base);line-height:var(--leading-normal);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-weight:800;letter-spacing:var(--tracking-tight);line-height:var(--leading-tight)}
+p{margin:0}
+a{color:var(--text-link);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font-family:inherit}
+img{max-width:100%;display:block}
+.num{font-family:var(--font-numeric);font-variant-numeric:tabular-nums}
+
+/* ---------- utilidades de vista ---------- */
+.view{display:none}
+.view.is-active{display:block}
+@media (prefers-reduced-motion:no-preference){
+  .view.is-active{animation:agr-in .26s var(--ease-out) both}
+  @keyframes agr-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+.wrap{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6)}
+@media(max-width:640px){.wrap{padding:0 var(--space-4)}}
+
+/* ---------- HUB ---------- */
+#hub{background:var(--surface-dark);color:var(--text-on-dark);min-height:100%;
+  position:relative;overflow:hidden}
+.hub-mesh{position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(48rem 30rem at 82% -6%,rgba(3,181,133,.42),transparent 62%),
+    radial-gradient(34rem 26rem at 8% 12%,rgba(186,244,233,.20),transparent 64%),
+    radial-gradient(28rem 22rem at 96% 58%,rgba(201,226,101,.16),transparent 66%),
+    radial-gradient(40rem 34rem at 40% 108%,rgba(7,62,56,.9),transparent 70%);}
+.hub-inner{position:relative;padding:var(--space-8) 0 var(--space-9)}
+@media(max-width:640px){.hub-inner{padding:var(--space-6) 0 var(--space-8)}}
+.hub-top{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-6);
+  flex-wrap:wrap;margin-bottom:var(--space-8)}
+.brandmark{display:flex;flex-direction:column;gap:var(--space-3)}
+.claim{font-size:var(--text-xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  color:var(--text-on-dark-muted);font-weight:600}
+.addressee{text-align:right;font-size:var(--text-sm);line-height:var(--leading-snug);
+  color:rgba(242,238,235,.78)}
+.addressee strong{display:block;color:var(--text-on-dark);font-weight:700;font-size:var(--text-base);
+  margin-bottom:2px}
+@media(max-width:640px){.addressee{text-align:left}}
+.hub-eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--text-xs);
+  letter-spacing:var(--tracking-wider);text-transform:uppercase;font-weight:700;
+  color:var(--lime);margin-bottom:var(--space-5)}
+.hub-eyebrow::before{content:"";width:0;height:0;border-left:8px solid var(--lime);
+  border-top:8px solid transparent;border-bottom:0}
+.hub-title{font-size:clamp(34px,5.4vw,66px);font-weight:800;letter-spacing:-.025em;
+  line-height:1.04;max-width:20ch;margin-bottom:var(--space-5)}
+.hub-title em{font-style:normal;color:var(--green-300)}
+.hub-lede{max-width:64ch;font-size:var(--text-md);line-height:var(--leading-relaxed);
+  color:rgba(242,238,235,.84);font-weight:400}
+@media(max-width:640px){.hub-lede{font-size:var(--text-base)}}
+
+/* tira de KPI */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);
+  margin:var(--space-8) 0 var(--space-8)}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.kpis{grid-template-columns:1fr}}
+.kpi{border:1px solid var(--border-on-dark);border-radius:var(--radius-md);
+  padding:var(--space-5);background:rgba(7,62,56,.42);display:flex;flex-direction:column;gap:var(--space-2)}
+.kpi-fig{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-weight:300;
+  font-size:clamp(38px,4.4vw,54px);line-height:1;letter-spacing:-.03em;color:var(--neutral-0)}
+.kpi-fig sup{font-size:.36em;font-weight:600;vertical-align:super;margin-left:.12em;letter-spacing:0}
+.kpi-lab{font-size:var(--text-sm);line-height:var(--leading-snug);color:rgba(242,238,235,.86)}
+.kpi-src{font-size:11px;line-height:1.4;color:var(--text-on-dark-muted);letter-spacing:.01em;
+  border-top:1px solid var(--border-on-dark);padding-top:var(--space-2);margin-top:auto}
+
+.hub-privacy{display:inline-flex;align-items:center;gap:var(--space-2);font-size:11px;
+  letter-spacing:var(--tracking-wider);text-transform:uppercase;font-weight:700;
+  color:rgba(242,238,235,.55);border:1px solid var(--border-on-dark);border-radius:var(--radius-pill);
+  padding:6px 14px;margin-bottom:var(--space-6)}
+
+.idx-head{display:flex;justify-content:space-between;align-items:baseline;gap:var(--space-4);
+  flex-wrap:wrap;margin-bottom:var(--space-5);padding-top:var(--space-6);
+  border-top:1px solid var(--border-on-dark)}
+.idx-head h2{font-size:var(--text-lg);color:var(--neutral-0)}
+.idx-head span{font-size:var(--text-sm);color:var(--text-on-dark-muted)}
+.idx{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3)}
+@media(max-width:1000px){.idx{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.idx{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.idx{grid-template-columns:1fr}}
+.tile{text-align:left;background:rgba(242,238,235,.045);border:1px solid var(--border-on-dark);
+  border-radius:var(--radius-md);padding:var(--space-4);cursor:pointer;color:var(--text-on-dark);
+  display:flex;flex-direction:column;gap:var(--space-2);min-height:128px;
+  transition:background .18s,border-color .18s,transform .18s}
+.tile:hover{background:rgba(3,181,133,.16);border-color:rgba(3,181,133,.5);transform:translateY(-2px)}
+.tile:focus-visible{outline:2px solid var(--green-400);outline-offset:2px}
+.tile-n{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-size:var(--text-xs);
+  font-weight:700;letter-spacing:var(--tracking-wide);color:var(--green-300)}
+.tile-t{font-size:var(--text-base);font-weight:700;line-height:1.2;letter-spacing:-.015em}
+.tile-d{font-size:var(--text-xs);line-height:1.45;color:rgba(242,238,235,.62);margin-top:auto}
+.tile.live .tile-n::after{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--lime);margin-left:8px;vertical-align:middle;
+  box-shadow:0 0 0 0 rgba(201,226,101,.7);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(201,226,101,0)}100%{box-shadow:0 0 0 0 rgba(201,226,101,0)}}
+@media(prefers-reduced-motion:reduce){.tile.live .tile-n::after{animation:none}}
+.tile.cta{grid-column:span 2;background:linear-gradient(118deg,var(--green-600) 0%,var(--green-500) 44%,#7BD6A4 74%,var(--lime) 118%);
+  border-color:transparent;color:#05322D}
+@media(max-width:520px){.tile.cta{grid-column:span 1}}
+.tile.cta:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.tile.cta .tile-n{color:rgba(5,50,45,.72)}
+.tile.cta .tile-t{font-size:var(--text-md)}
+.tile.cta .tile-d{color:rgba(5,50,45,.78)}
+.hub-foot{margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--border-on-dark);
+  font-size:var(--text-xs);line-height:var(--leading-relaxed);color:rgba(242,238,235,.62);max-width:92ch}
+.hub-foot strong{color:rgba(242,238,235,.9);font-weight:600}
+
+/* ---------- CHROME DE SECCIÓN ---------- */
+.sec{background:var(--surface-page);min-height:100vh;padding-bottom:var(--space-8)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;height:var(--bar-top);
+  background:rgba(242,238,235,.9);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border-subtle);display:flex;align-items:center}
+.bar-in{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6);width:100%;
+  display:flex;align-items:center;gap:var(--space-4)}
+@media(max-width:640px){.bar-in{padding:0 var(--space-4);gap:var(--space-2)}}
+.bar-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border-default);
+  background:var(--surface-card);color:var(--text-primary);border-radius:var(--radius-pill);
+  padding:7px 14px;font-size:var(--text-xs);font-weight:700;cursor:pointer;letter-spacing:.01em;
+  transition:background .15s,border-color .15s}
+.bar-btn:hover{background:var(--green-100);border-color:var(--green-400)}
+.bar-btn:focus-visible{outline:2px solid var(--green-500);outline-offset:2px}
+.bar-btn[disabled]{opacity:.34;cursor:default}
+.bar-here{flex:1;min-width:0;font-size:var(--text-xs);color:var(--text-secondary);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:var(--tracking-wide)}
+.bar-here b{color:var(--text-primary);font-weight:700}
+.bar-nav{display:flex;gap:var(--space-2)}
+.bar-nav .bar-btn{padding:7px 11px}
+@media(max-width:640px){.bar-here{display:none}}
+
+.sec-head{padding:var(--space-8) 0 var(--space-6)}
+@media(max-width:640px){.sec-head{padding:var(--space-6) 0 var(--space-5)}}
+.eyebrow{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-xs);
+  letter-spacing:var(--tracking-wider);text-transform:uppercase;font-weight:700;
+  color:var(--text-brand);margin-bottom:var(--space-4)}
+.eyebrow .n{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;
+  background:var(--green-800);color:var(--neutral-0);border-radius:var(--radius-sm);
+  padding:3px 8px;letter-spacing:.06em}
+h1.sec-t{font-size:clamp(28px,4vw,46px);letter-spacing:-.025em;max-width:24ch;margin-bottom:var(--space-4)}
+.sec-lede{max-width:70ch;font-size:var(--text-md);line-height:var(--leading-relaxed);
+  color:var(--text-secondary)}
+@media(max-width:640px){.sec-lede{font-size:var(--text-base)}}
+.sec-body>*+*{margin-top:var(--space-6)}
+.sec-foot{margin-top:var(--space-8);padding-top:var(--space-5);border-top:1px solid var(--border-subtle);
+  display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap}
+.lnk{background:none;border:none;padding:0;color:var(--text-link);font-size:var(--text-sm);
+  font-weight:700;cursor:pointer;letter-spacing:.01em}
+.lnk:hover{text-decoration:underline}
+.btn-next{display:inline-flex;align-items:center;gap:8px;background:var(--green-600);color:#fff;
+  border:none;border-radius:var(--radius-pill);padding:11px 20px;font-size:var(--text-sm);
+  font-weight:700;cursor:pointer;transition:background .15s,transform .12s}
+.btn-next:hover{background:var(--green-700)}
+.btn-next:active{transform:scale(.98)}
+.btn-next:focus-visible{outline:2px solid var(--green-500);outline-offset:2px}
+
+/* ---------- TIPOS DE BLOQUE ---------- */
+.prose{max-width:74ch;font-size:var(--text-base);line-height:var(--leading-relaxed);
+  color:var(--text-primary)}
+.prose+.prose{margin-top:var(--space-4)}
+.prose strong{font-weight:700}
+.h3{font-size:var(--text-lg);font-weight:800;letter-spacing:-.02em;margin-bottom:var(--space-4)}
+.h4{font-size:var(--text-md);font-weight:800;letter-spacing:-.015em;margin-bottom:var(--space-3)}
+.note{font-size:var(--text-xs);line-height:var(--leading-relaxed);color:var(--text-muted)}
+
+/* Panel oscuro */
+.panel{background:var(--surface-dark);color:var(--text-on-dark);border-radius:var(--radius-xl);
+  padding:var(--space-7);position:relative;overflow:hidden}
+@media(max-width:640px){.panel{padding:var(--space-5);border-radius:var(--radius-lg)}}
+.panel::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(30rem 20rem at 108% -18%,rgba(3,181,133,.5),transparent 60%),
+             radial-gradient(22rem 18rem at -10% 118%,rgba(201,226,101,.14),transparent 62%)}
+.panel>*{position:relative;z-index:1}
+.panel .h3,.panel .h4{color:var(--neutral-0)}
+.panel .prose{color:rgba(242,238,235,.88)}
+.panel-label{font-size:var(--text-xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  font-weight:700;color:var(--lime);margin-bottom:var(--space-4)}
+
+/* Card con pestaña */
+.tabcards{display:grid;gap:var(--space-4)}
+.tabcards.c2{grid-template-columns:repeat(2,1fr)}
+.tabcards.c3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.tabcards.c3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.tabcards.c2,.tabcards.c3{grid-template-columns:1fr}}
+.tabcard{position:relative;border-radius:var(--radius-md);padding:var(--space-5);
+  padding-top:calc(var(--space-5) + 14px);background:var(--surface-card);box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;gap:var(--space-3)}
+.tabcard>.tab{position:absolute;top:0;left:0;font-size:11px;font-weight:800;
+  letter-spacing:var(--tracking-wider);text-transform:uppercase;padding:4px 12px;
+  border-radius:var(--radius-md) 0 var(--radius-md) 0;line-height:1.3}
+.tabcard.mint{background:var(--green-100)}
+.tabcard.mint>.tab{background:var(--green-200);color:var(--green-900)}
+.tabcard.dark{background:var(--green-800);color:var(--text-on-dark);box-shadow:none}
+.tabcard.dark>.tab{background:var(--green-900);color:var(--green-300)}
+.tabcard.dark .tc-t{color:var(--neutral-0)}
+.tabcard.dark .tc-b{color:rgba(242,238,235,.84)}
+.tabcard.dark .tc-s{color:var(--green-300);border-top-color:var(--border-on-dark)}
+.tabcard.cream{background:var(--surface-card)}
+.tabcard.cream>.tab{background:var(--neutral-100);color:var(--neutral-600)}
+.tabcard.lime{background:#F4F8E4}
+.tabcard.lime>.tab{background:var(--lime);color:#3A4517}
+.tc-t{font-size:var(--text-base);font-weight:800;letter-spacing:-.015em;line-height:1.25}
+.tc-b{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--text-secondary)}
+.tc-s{font-size:11px;line-height:1.45;color:var(--text-muted);border-top:1px solid var(--border-subtle);
+  padding-top:var(--space-2);margin-top:auto}
+
+/* Tiles de estadística */
+.stats{display:grid;gap:var(--space-4);grid-template-columns:repeat(4,1fr)}
+.stats.s3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.stats,.stats.s3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.stats,.stats.s3{grid-template-columns:1fr}}
+.stat{border-radius:var(--radius-md);padding:var(--space-5);display:flex;flex-direction:column;
+  gap:var(--space-2);min-height:170px}
+.stat.mint{background:var(--green-200);color:var(--green-900)}
+.stat.cream{background:var(--surface-card);box-shadow:var(--shadow-sm)}
+.stat.dark{background:var(--green-800);color:var(--text-on-dark)}
+.stat.lime{background:var(--lime);color:#3A4517}
+.fig{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-weight:300;
+  font-size:clamp(40px,4.6vw,58px);line-height:.98;letter-spacing:-.035em}
+.fig sup{font-size:.34em;font-weight:700;vertical-align:super;margin-left:.1em;letter-spacing:0}
+.fig small{font-size:.32em;font-weight:600;letter-spacing:0;margin-left:.16em}
+.stat-l{font-size:var(--text-sm);line-height:var(--leading-snug);font-weight:500}
+.stat.dark .stat-l{color:rgba(242,238,235,.9)}
+.stat-s{font-size:11px;line-height:1.4;opacity:.66;margin-top:auto;padding-top:var(--space-2)}
+.stat.dark .stat-s{color:var(--green-300);opacity:1}
+
+/* Barras píldora */
+.pills{display:flex;align-items:flex-end;gap:clamp(10px,2.4vw,26px);height:230px;
+  padding:var(--space-5) 0 0}
+.pill-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:var(--space-2);height:100%;
+  justify-content:flex-end}
+.pill-v{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-size:var(--text-sm);
+  font-weight:700;color:var(--text-primary)}
+.pill{width:100%;max-width:62px;border-radius:var(--radius-pill) var(--radius-pill) 4px 4px;
+  background:linear-gradient(180deg,var(--green-400),var(--green-700));min-height:6px}
+.pill.on{background:linear-gradient(180deg,var(--lime),var(--green-500))}
+.pill.off{background:linear-gradient(180deg,var(--neutral-200),var(--neutral-300))}
+.pill-l{font-size:var(--text-xs);color:var(--text-secondary);text-align:center;line-height:1.3;
+  font-weight:600}
+
+/* Tabla */
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius-md);border:1px solid var(--border-subtle);
+  background:var(--surface-card);-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:800px;font-size:var(--text-sm)}
+th,td{text-align:left;padding:var(--space-4);border-bottom:1px solid var(--border-subtle);
+  vertical-align:top;line-height:var(--leading-snug)}
+thead th{background:var(--green-800);color:var(--neutral-0);font-size:var(--text-xs);font-weight:700;
+  letter-spacing:var(--tracking-wide);text-transform:uppercase;position:sticky;top:0}
+tbody tr:last-child td{border-bottom:none}
+tbody tr.me{background:var(--green-100)}
+td.co{font-weight:700;color:var(--text-primary)}
+td .badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;background:var(--green-200);color:var(--green-900);border-radius:var(--radius-sm);
+  padding:2px 7px;margin-top:6px}
+.na{color:var(--text-muted);font-style:italic}
+.scroll-hint{font-size:var(--text-xs);color:var(--text-muted);margin-top:var(--space-2)}
+
+/* Timeline */
+.tl{position:relative;padding-left:var(--space-6);margin-top:var(--space-5)}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--green-400),var(--green-200))}
+.tl-i{position:relative;padding-bottom:var(--space-6)}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:"";position:absolute;left:calc(-1 * var(--space-6) + 2px);top:5px;
+  width:12px;height:12px;border-radius:50%;background:var(--green-600);
+  box-shadow:0 0 0 3px var(--surface-page)}
+.tl-i.key::before{background:var(--lime);box-shadow:0 0 0 3px var(--surface-page),0 0 0 5px rgba(201,226,101,.35)}
+.tl-d{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-size:var(--text-xs);
+  font-weight:700;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-brand);
+  margin-bottom:4px}
+.tl-t{font-size:var(--text-base);font-weight:800;letter-spacing:-.015em;margin-bottom:4px}
+.tl-b{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--text-secondary)}
+.tl-s{font-size:11px;color:var(--text-muted);margin-top:5px}
+
+/* Cita */
+.quote{background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  padding:var(--space-6);border-left:4px solid var(--green-500)}
+.quote q{display:block;font-size:var(--text-md);line-height:var(--leading-snug);font-weight:600;
+  letter-spacing:-.015em;color:var(--text-primary);quotes:"«" "»"}
+.quote figcaption{margin-top:var(--space-4);font-size:var(--text-xs);color:var(--text-secondary);
+  line-height:var(--leading-snug)}
+.quote figcaption b{color:var(--text-primary);display:block;font-size:var(--text-sm);font-weight:700}
+
+/* Grid genérico */
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-5)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
+@media(max-width:900px){.g3{grid-template-columns:1fr}}
+@media(max-width:768px){.g2{grid-template-columns:1fr}}
+.card{background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  padding:var(--space-5)}
+.card.top-a{border-top:4px solid var(--green-500)}
+.card.top-b{border-top:4px solid var(--lime)}
+.card.top-c{border-top:4px solid var(--color-warning)}
+
+/* Escenario / bifurcación */
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-top:var(--space-4)}
+@media(max-width:768px){.fork{grid-template-columns:1fr}}
+.fork-b{border-radius:var(--radius-md);padding:var(--space-4);background:var(--surface-sunken)}
+.fork-b.b{background:var(--green-100)}
+.fork-b h5{margin:0 0 6px;font-size:var(--text-sm);font-weight:800;letter-spacing:-.01em}
+.fork-b p{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--text-secondary)}
+.resolve{margin-top:var(--space-4);font-size:var(--text-sm);line-height:var(--leading-relaxed);
+  color:var(--text-primary);background:var(--green-800);color:var(--text-on-dark);
+  border-radius:var(--radius-md);padding:var(--space-4)}
+
+/* Fichas de hipótesis */
+.hyp{background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)}
+.hyp-n{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-numeric);
+  font-size:var(--text-xs);font-weight:800;background:var(--green-800);color:var(--neutral-0);
+  border-radius:var(--radius-sm);padding:3px 9px;align-self:flex-start;letter-spacing:.06em}
+.hyp-t{font-size:var(--text-base);font-weight:800;letter-spacing:-.015em;line-height:1.3}
+.hyp-f{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3) var(--space-4)}
+@media(max-width:560px){.hyp-f{grid-template-columns:1fr}}
+.hyp-f div{font-size:var(--text-xs);line-height:var(--leading-snug)}
+.hyp-f dt{font-weight:800;letter-spacing:var(--tracking-wide);text-transform:uppercase;font-size:10px;
+  color:var(--text-brand);margin-bottom:3px}
+.hyp-f dd{margin:0;color:var(--text-secondary)}
+
+/* Inputs del prediagnóstico */
+.inputs{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
+@media(max-width:768px){.inputs{grid-template-columns:1fr}}
+.inp{background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  padding:var(--space-5);display:flex;gap:var(--space-4)}
+.inp-n{font-family:var(--font-numeric);font-weight:300;font-size:var(--text-xl);line-height:1;
+  color:var(--green-400);flex-shrink:0;letter-spacing:-.03em}
+.inp h5{margin:0 0 6px;font-size:var(--text-base);font-weight:800;letter-spacing:-.015em}
+.inp p{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--text-secondary)}
+.inp .mine{display:block;margin-top:var(--space-3);padding-top:var(--space-3);
+  border-top:1px solid var(--border-subtle);color:var(--text-primary)}
+.inp .mine b{color:var(--text-brand)}
+
+/* ---------- CONSOLA DE AGENTES ---------- */
+.console{background:var(--green-900);border-radius:var(--radius-xl);padding:var(--space-6);
+  color:var(--text-on-dark);position:relative;overflow:hidden}
+@media(max-width:640px){.console{padding:var(--space-4);border-radius:var(--radius-lg)}}
+.console::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(186,244,233,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(186,244,233,.05) 1px,transparent 1px);
+  background-size:34px 34px}
+.console>*{position:relative;z-index:1}
+.console-top{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);
+  flex-wrap:wrap;border-bottom:1px solid var(--border-on-dark);padding-bottom:var(--space-4);
+  margin-bottom:var(--space-5)}
+.console-ttl{font-size:var(--text-xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  font-weight:700;color:var(--green-300);display:flex;align-items:center;gap:8px}
+.console-ttl::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);
+  box-shadow:0 0 0 0 rgba(201,226,101,.7);animation:pulse 2.2s infinite}
+@media(prefers-reduced-motion:reduce){.console-ttl::before{animation:none}}
+.console-tag{font-size:10px;letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  font-weight:700;color:rgba(242,238,235,.5);border:1px solid var(--border-on-dark);
+  border-radius:var(--radius-pill);padding:3px 10px}
+.agents{display:grid;grid-template-columns:200px 1fr;gap:var(--space-5)}
+@media(max-width:820px){.agents{grid-template-columns:1fr}}
+.agent-list{display:flex;flex-direction:column;gap:6px}
+@media(max-width:820px){.agent-list{flex-direction:row;overflow-x:auto;padding-bottom:6px}}
+.agent-b{text-align:left;background:rgba(242,238,235,.05);border:1px solid var(--border-on-dark);
+  border-radius:var(--radius-sm);padding:10px 12px;color:rgba(242,238,235,.78);cursor:pointer;
+  font-size:var(--text-xs);font-weight:600;line-height:1.3;transition:background .15s,color .15s;
+  white-space:nowrap}
+@media(max-width:820px){.agent-b{flex:0 0 auto}}
+.agent-b:hover{background:rgba(3,181,133,.18);color:var(--neutral-0)}
+.agent-b:focus-visible{outline:2px solid var(--green-400);outline-offset:2px}
+.agent-b.on{background:var(--green-600);border-color:var(--green-500);color:#fff}
+.agent-b .ab-n{font-family:var(--font-numeric);font-size:10px;letter-spacing:.08em;display:block;
+  opacity:.72;margin-bottom:2px}
+.agent-p{border:1px solid var(--border-on-dark);border-radius:var(--radius-md);padding:var(--space-5);
+  background:rgba(8,94,84,.32);min-height:330px}
+@media(max-width:640px){.agent-p{padding:var(--space-4)}}
+.agent-p h4{font-size:var(--text-md);color:var(--neutral-0);margin-bottom:var(--space-4)}
+.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:var(--space-5)}
+@media(max-width:820px){.chain{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.chain{grid-template-columns:1fr}}
+.chain-s{background:rgba(242,238,235,.06);border-radius:var(--radius-sm);padding:10px;
+  border-top:2px solid var(--green-500)}
+.chain-s:nth-child(3){border-top-color:var(--lime)}
+.chain-s dt{font-size:9px;letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  font-weight:800;color:var(--green-300);margin-bottom:4px}
+.chain-s dd{margin:0;font-size:var(--text-xs);line-height:1.4;color:rgba(242,238,235,.88)}
+.precond{background:rgba(201,226,101,.1);border:1px solid rgba(201,226,101,.3);
+  border-radius:var(--radius-sm);padding:var(--space-4)}
+.precond dt{font-size:10px;letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  font-weight:800;color:var(--lime);margin-bottom:6px}
+.precond dd{margin:0;font-size:var(--text-sm);line-height:var(--leading-relaxed);
+  color:rgba(242,238,235,.88)}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);margin-top:var(--space-5)}
+@media(max-width:768px){.rules{grid-template-columns:1fr}}
+.rule{border:1px solid var(--border-on-dark);border-radius:var(--radius-sm);padding:var(--space-4)}
+.rule b{display:block;font-size:var(--text-sm);color:var(--neutral-0);margin-bottom:5px}
+.rule span{font-size:var(--text-xs);line-height:1.5;color:rgba(242,238,235,.72)}
+
+/* ---------- CASOS DE ÉXITO ---------- */
+.case{background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);
+  overflow:hidden}
+.case-h{display:grid;grid-template-columns:1fr auto;gap:var(--space-5);padding:var(--space-6);
+  align-items:start;border-bottom:1px solid var(--border-subtle)}
+@media(max-width:680px){.case-h{grid-template-columns:1fr;padding:var(--space-5)}}
+.case-name{font-size:var(--text-lg);font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.case-meta{font-size:var(--text-xs);color:var(--text-secondary);line-height:var(--leading-snug)}
+.roi{text-align:center;background:var(--green-800);border-radius:var(--radius-md);
+  padding:var(--space-4) var(--space-5);color:var(--text-on-dark);min-width:150px}
+.roi .fig{color:var(--neutral-0);font-size:clamp(34px,4vw,46px)}
+.roi span{display:block;font-size:10px;letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  color:var(--green-300);font-weight:700;margin-top:4px}
+.case-b{padding:var(--space-6)}
+@media(max-width:680px){.case-b{padding:var(--space-5)}}
+.case-why{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--text-secondary);
+  margin-bottom:var(--space-5);max-width:76ch}
+ul.res{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);
+  gap:var(--space-3)}
+@media(max-width:768px){ul.res{grid-template-columns:1fr}}
+ul.res li{position:relative;padding-left:22px;font-size:var(--text-sm);line-height:var(--leading-snug);
+  color:var(--text-primary)}
+ul.res li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;
+  background:var(--green-500)}
+.vid{margin-top:var(--space-5);border-radius:var(--radius-md);overflow:hidden;background:var(--green-900)}
+.vid video{width:100%;display:block;background:#000}
+.vid-cap{padding:var(--space-3) var(--space-4);font-size:var(--text-xs);color:var(--text-on-dark-muted);
+  line-height:var(--leading-snug);background:var(--green-900)}
+.vid-fb{padding:var(--space-5);color:rgba(242,238,235,.85);font-size:var(--text-sm);
+  line-height:var(--leading-relaxed)}
+.vid-fb a{color:var(--green-300);text-decoration:underline}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);margin-top:var(--space-6)}
+@media(max-width:768px){.creds{grid-template-columns:1fr}}
+.cred{background:var(--green-800);color:var(--text-on-dark);border-radius:var(--radius-md);
+  padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-2)}
+.cred .fig{color:var(--neutral-0)}
+.cred p{font-size:var(--text-sm);line-height:var(--leading-snug);color:rgba(242,238,235,.86)}
+.cred a{color:var(--green-300);text-decoration:underline}
+
+/* ---------- ESQUEMA DE RED / CUADRANTE ---------- */
+.svg-box{background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  padding:var(--space-5)}
+.svg-box svg{width:100%;height:auto;display:block}
+.svg-cap{font-size:var(--text-xs);line-height:var(--leading-relaxed);color:var(--text-muted);
+  margin-top:var(--space-3);padding-top:var(--space-3);border-top:1px solid var(--border-subtle)}
+.legend{display:flex;flex-wrap:wrap;gap:var(--space-4);margin-top:var(--space-3);font-size:var(--text-xs);
+  color:var(--text-secondary)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;
+  vertical-align:-1px}
+
+/* ---------- LEYENDA DE CLASIFICACIÓN ---------- */
+.klass{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3)}
+@media(max-width:820px){.klass{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.klass{grid-template-columns:1fr}}
+.kl{border-radius:var(--radius-md);padding:var(--space-4);background:var(--surface-card);
+  box-shadow:var(--shadow-sm)}
+.kl b{display:block;font-size:11px;letter-spacing:var(--tracking-wider);text-transform:uppercase;
+  font-weight:800;margin-bottom:6px;color:var(--text-brand)}
+.kl span{font-size:var(--text-xs);line-height:var(--leading-relaxed);color:var(--text-secondary)}
+
+/* Fuentes */
+ol.src{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:var(--space-3)}
+ol.src li{counter-increment:s;position:relative;padding-left:44px;font-size:var(--text-sm);
+  line-height:var(--leading-relaxed);color:var(--text-secondary)}
+ol.src li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:2px;
+  font-family:var(--font-numeric);font-size:var(--text-xs);font-weight:800;color:var(--neutral-0);
+  background:var(--green-800);border-radius:var(--radius-sm);padding:3px 7px;letter-spacing:.05em}
+ol.src li b{color:var(--text-primary);font-weight:700}
+
+/* Limitaciones */
+.lims{display:grid;gap:var(--space-3)}
+.lim{background:var(--color-warning-bg);border-radius:var(--radius-md);padding:var(--space-4);
+  border-left:3px solid var(--color-warning)}
+.lim b{display:block;font-size:var(--text-sm);font-weight:800;margin-bottom:5px;color:var(--neutral-800)}
+.lim span{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--neutral-600)}
+
+/* ---------- CTA ---------- */
+#cta .sec{background:var(--surface-page)}
+.cta-panel{background:linear-gradient(126deg,var(--green-900) 0%,var(--green-700) 34%,var(--green-500) 72%,var(--lime) 132%);
+  border-radius:var(--radius-xl);padding:var(--space-8);color:var(--neutral-0);position:relative;
+  overflow:hidden}
+@media(max-width:640px){.cta-panel{padding:var(--space-5);border-radius:var(--radius-lg)}}
+.cta-panel h2{font-size:clamp(26px,3.6vw,42px);letter-spacing:-.025em;max-width:22ch;
+  margin-bottom:var(--space-5)}
+.cta-panel .prose{color:rgba(255,255,255,.93);max-width:66ch}
+.cta-acts{display:flex;gap:var(--space-3);flex-wrap:wrap;margin:var(--space-6) 0}
+.cta-a{display:inline-flex;align-items:center;gap:9px;border-radius:var(--radius-pill);
+  padding:14px 26px;font-size:var(--text-base);font-weight:800;text-decoration:none;
+  transition:transform .12s,box-shadow .15s}
+.cta-a:hover{transform:translateY(-2px);text-decoration:none}
+.cta-a.p{background:var(--neutral-0);color:var(--green-900);box-shadow:var(--shadow-lg)}
+.cta-a.s{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.42)}
+.sig{border-top:1px solid rgba(255,255,255,.3);padding-top:var(--space-5);font-size:var(--text-sm);
+  line-height:var(--leading-relaxed);color:rgba(255,255,255,.94)}
+.sig b{display:block;font-size:var(--text-md);font-weight:800;color:#fff}
+.sig a{color:#fff;text-decoration:underline}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);margin-top:var(--space-6)}
+@media(max-width:768px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  padding:var(--space-5);border-top:4px solid var(--green-500)}
+.step b{display:block;font-size:var(--text-xs);letter-spacing:var(--tracking-wider);
+  text-transform:uppercase;color:var(--text-brand);font-weight:800;margin-bottom:8px}
+.step h5{margin:0 0 8px;font-size:var(--text-base);font-weight:800;letter-spacing:-.015em}
+.step p{font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--text-secondary)}
+
+/* Wordmark SVG */
+.wm{height:26px;width:auto}
+.wm-hub{height:30px}
+@media(max-width:640px){.wm-hub{height:24px}}
+
+</style>
+</head>
+<body>
+
+<!-- ============================ HUB ============================ -->
+<section id="hub" class="view is-active" aria-label="Portada e índice">
+  <div class="hub-mesh" aria-hidden="true"></div>
+  <div class="hub-inner">
+    <div class="wrap">
+
+      <div class="hub-top">
+        <div class="brandmark">
+          <svg class="wm wm-hub" viewBox="0 0 268 34" role="img" aria-label="London Consulting Group">
+            <g fill="#F2EEEB">
+              <path d="M2 4h6v18h11v6H2z"/>
+              <path d="M34 3a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25zm0 6.2a6.3 6.3 0 1 1 0 12.6 6.3 6.3 0 0 1 0-12.6z"/>
+              <path d="M56 28 69.5 4 83 28z" opacity=".95"/>
+              <path d="M92 4h9a12 12 0 0 1 0 24h-9zm6.2 6v12h2.4a6 6 0 0 0 0-12z"/>
+              <path d="M131 3a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25zm0 6.2a6.3 6.3 0 1 1 0 12.6 6.3 6.3 0 0 1 0-12.6z"/>
+              <path d="M153 28 166.5 4 180 28z" opacity=".95"/>
+            </g>
+            <g fill="#7FE0C0"><circle cx="190" cy="16" r="3"/></g>
+            <text x="201" y="13" font-family="Manrope,Arial,sans-serif" font-size="9.5" font-weight="700"
+                  letter-spacing="1.6" fill="#7FE0C0">CONSULTING</text>
+            <text x="201" y="26" font-family="Manrope,Arial,sans-serif" font-size="9.5" font-weight="700"
+                  letter-spacing="1.6" fill="#7FE0C0">GROUP</text>
+          </svg>
+          <span class="claim">Shape Your Business</span>
+        </div>
+        <div class="addressee">
+          Análisis preparado para
+          <strong>Dirección General</strong>
+          AGRANA Fruit México, S.A. de C.V.<br>
+          Jacona de Plancarte, Michoacán · Septiembre de 2026
+        </div>
+      </div>
+
+      <div class="hub-eyebrow">Inteligencia estratégica · documento privado</div>
+
+      <h1 class="hub-title">Una planta durante cuarenta y cinco años. <em>Tres ubicaciones y el doble de plantilla en el mismo ciclo de inversión.</em></h1>
+
+      <p class="hub-lede">En mayo de 2025 anunciaron 15 millones de dólares para ampliar capacidad en Jacona, Zamora y Tangancícuaro, orientados a duplicar la plantilla. En junio de 2025 la matriz absorbió Austria Juice; en septiembre de 2026 acordó comprar esarom y subió su guía de EBIT. Y el 1 de enero de 2027 la jornada legal baja a 46 horas con registro electrónico obligatorio. Tres cosas que rara vez ocurren en los mismos dieciocho meses.</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi-fig num">15<sup>MDD</sup></div>
+          <div class="kpi-lab">Inversión anunciada para ampliar capacidad industrial en Jacona, Zamora y Tangancícuaro, orientada a duplicar la plantilla</div>
+          <div class="kpi-src">Sedeco Michoacán · 4 de mayo de 2025</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-fig num">75<small>mil t</small></div>
+          <div class="kpi-lab">Fruta procesada al año en la planta de Jacona, sobre cuatro hectáreas. La fresa es la de mayor comercialización</div>
+          <div class="kpi-src">Gobierno de Michoacán · 28 de noviembre de 2023</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-fig num">46<sup>h</sup></div>
+          <div class="kpi-lab">Jornada máxima semanal desde el 1 de enero de 2027, con registro electrónico de jornada obligatorio</div>
+          <div class="kpi-src">DOF · 3 de marzo y 1 de mayo de 2026</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-fig num">50.9<sup>%</sup></div>
+          <div class="kpi-lab">Peso de Food &amp; Beverage Solutions en los ingresos del grupo en 2025|26, contra 46.4% el año previo</div>
+          <div class="kpi-src">AGRANA Beteiligungs-AG · 12 de mayo de 2026</div>
+        </div>
+      </div>
+
+      <div class="idx-head">
+        <h2>Contenido</h2>
+        <span>Catorce secciones · dos minutos de lectura cada una</span>
+      </div>
+
+      <div class="idx" id="idx"></div>
+
+      <p class="hub-foot">Documento preparado por London Consulting Group México <strong>exclusivamente a partir de fuentes públicas</strong>. No contiene información confidencial de AGRANA ni de sus clientes. Cada afirmación está clasificada como hecho, señal, hipótesis o implicación. Las cifras financieras que aparecen aquí <strong>no provienen de la operación mexicana</strong>: provienen de los reportes obligatorios de AGRANA Beteiligungs-AG a la Bolsa de Viena, que consolidan el grupo y sus dos áreas de negocio, y no desglosan a México. Las limitaciones completas están declaradas en la sección 14.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 01 · LA TESIS ============================ -->
+<section id="s01" class="view" aria-label="Sección 1">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">01</span> La tesis</div>
+        <h1 class="sec-t" tabindex="-1">La restricción deja de ser capacidad instalada y pasa a ser unidad de medida</h1>
+        <p class="sec-lede">Los 15 millones de dólares compran tanques, cámaras y metros cuadrados. Lo que no compran es un criterio común para comparar rendimiento, receta y hora productiva entre tres sitios que hasta ahora eran uno.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="panel">
+          <div class="panel-label">Core Business Hypothesis</div>
+          <p class="prose">AGRANA Fruit México pasó cuarenta y cinco años perfeccionando <strong>un sitio</strong>. La inversión anunciada en mayo de 2025 —15 millones de dólares repartidos entre Jacona, Zamora y Tangancícuaro, orientados a duplicar la plantilla— lo convierte en <strong>una red de tres ubicaciones</strong>. Ocurre al mismo tiempo que la matriz declara Food &amp; Beverage Solutions como su plataforma de crecimiento hacia soluciones a la medida, que sus clientes de helado y panificación reformulan bajo IEPS y etiquetado frontal, y que la ley recorta la jornada a 46 horas el 1 de enero de 2027 con registro electrónico obligatorio.</p>
+          <p class="prose" style="margin-top:var(--space-4)">La capacidad ya se está comprando y no es materia de discusión. <strong>Lo que no se compra con los 15 millones es la unidad de medida:</strong> rendimiento de fruta por lote, costo real de un cambio de receta y horas productivas por hora contratada, medidos con el mismo criterio en tres sitios en lugar de uno. Esa es la variable que decide si duplicar la plantilla duplica la capacidad o solo duplica la nómina.</p>
+        </div>
+
+        <div>
+          <h3 class="h3">La cadena de evidencia, en cinco pasos</h3>
+          <div class="tabcards c3">
+            <article class="tabcard mint"><span class="tab">Hecho</span>
+              <div class="tc-t">Un sitio, cuatro hectáreas, 75 mil toneladas</div>
+              <p class="tc-b">La planta de Jacona procesa 75 mil toneladas de fruta al año sobre cuatro hectáreas, con planta de tratamiento de agua propia. En 2023 obtenía la mitad de su energía de paneles solares; en 2025 declaró 80% de energía limpia.</p>
+              <p class="tc-s">Gobierno de Michoacán, 28 de noviembre de 2023 · Sedeco Michoacán, 4 de mayo de 2025</p>
+            </article>
+            <article class="tabcard mint"><span class="tab">Hecho</span>
+              <div class="tc-t">La expansión no es una ampliación: son tres domicilios</div>
+              <p class="tc-b">El plan anunciado amplía capacidad industrial en Jacona «así como en zonas aledañas como Zamora y Tangancícuaro», y está orientado a duplicar la plantilla laboral.</p>
+              <p class="tc-s">Sedeco Michoacán · Festival Michoacán de Origen, 4 de mayo de 2025</p>
+            </article>
+            <article class="tabcard mint"><span class="tab">Hecho</span>
+              <div class="tc-t">La hora de trabajo cambia de precio por calendario</div>
+              <p class="tc-b">Jornada máxima de 46 horas desde el 1 de enero de 2027, sin reducir sueldos ni prestaciones, con el tope de horas extra congelado en 9 semanales ese mismo año y registro electrónico exigible desde esa fecha.</p>
+              <p class="tc-s">DOF, 3 de marzo de 2026 y 1 de mayo de 2026 · Transitorios Segundo, Cuarto y Quinto</p>
+            </article>
+            <article class="tabcard lime"><span class="tab">Hipótesis</span>
+              <div class="tc-t">El sitio marginal no rinde como el sitio original</div>
+              <p class="tc-b">Cuarenta y cinco años de curva de aprendizaje viven en Jacona. Un segundo y un tercer sitio arrancan sin esa curva, con personal nuevo, y compiten por la misma fruta en la misma ventana de cosecha.</p>
+              <p class="tc-s">Interpretación de LCG sobre los hechos anteriores. Refutable con datos internos.</p>
+            </article>
+            <article class="tabcard lime"><span class="tab">Hipótesis</span>
+              <div class="tc-t">El consolidado deja de bastar para decidir</div>
+              <p class="tc-b">Con un sitio, el indicador de planta y el indicador de compañía son el mismo número. Con tres, el total puede mejorar mientras un sitio subsidia a otro, y nadie lo vería hasta el cierre.</p>
+              <p class="tc-s">Interpretación de LCG. Se prueba comparando rendimiento y costo por sitio.</p>
+            </article>
+            <article class="tabcard dark"><span class="tab">Implicación</span>
+              <div class="tc-t">La pregunta útil cambia de «cuánto más» a «cuánto deja cada uno»</div>
+              <p class="tc-b">Si la tesis es correcta, el trabajo de los próximos dieciocho meses no es instalar más capacidad —eso ya está decidido y financiado— sino instalar la forma de compararla antes de que los tres sitios estén operando.</p>
+              <p class="tc-s">Ventana de oportunidad: antes de que arranque la operación simultánea.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="card top-a">
+          <h3 class="h4">Lo que esta pieza no afirma</h3>
+          <p class="prose">No afirmamos que AGRANA no mida. Una planta que sostiene 75 mil toneladas anuales, exporta a Estados Unidos, Japón y Canadá, y pertenece al líder mundial en preparados de fruta, evidentemente mide, y mide bien. Lo que planteamos es <strong>a qué nivel y con qué criterio</strong>: una cosa es el indicador de una planta madura con cuarenta y cinco años de historia, y otra es la contribución comparable entre tres sitios con antigüedades, plantillas y curvas de aprendizaje distintas, en el mismo año en que la hora de trabajo cambia de precio. Eso es lo que proponemos poner a prueba, y para eso hacen falta datos que solo existen adentro.</p>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 02 · LO QUE YA ESTÁ RESUELTO ============================ -->
+<section id="s02" class="view" aria-label="Sección 2">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">02</span> Lo que ya está resuelto</div>
+        <h1 class="sec-t" tabindex="-1">Antes de proponer nada, el inventario de lo que AGRANA ya demuestra</h1>
+        <p class="sec-lede">Ninguna hipótesis de esta pieza toca estos seis frentes. Están resueltos, son verificables desde fuera, y son exactamente la razón por la que un grupo austriaco cotizado eligió Michoacán para su única planta de fruta en México en lugar de abastecerse desde Estados Unidos.</p>
+      </header>
+
+      <div class="sec-body">
+        <div class="tabcards c3">
+          <article class="tabcard mint"><span class="tab">Hecho</span>
+            <div class="tc-t">Cuarenta y cinco años en el mismo valle</div>
+            <p class="tc-b">Constituida el 27 de noviembre de 1981, nació en Zamora como SIASPORT dentro de instalaciones de otra empresa del giro, y pasó a instalaciones propias en Jacona en 1990. Cambió tres veces de dueño corporativo —SIAS MPA, Atys, AGRANA— sin moverse de la cuenca.</p>
+            <p class="tc-s">mx.agrana.com, consultado en septiembre de 2026 · registro corporativo</p>
+          </article>
+          <article class="tabcard mint"><span class="tab">Hecho</span>
+            <div class="tc-t">Pertenece al líder mundial de la categoría</div>
+            <p class="tc-b">AGRANA se describe como líder mundial en preparados de fruta y principal fabricante global de concentrados de jugo de manzana y berries, con unos 8,400 colaboradores, 50 plantas y cerca de 3.2 mil millones de euros de facturación anual.</p>
+            <p class="tc-s">AGRANA Beteiligungs-AG · comunicado del 9 de septiembre de 2026</p>
+          </article>
+          <article class="tabcard mint"><span class="tab">Hecho</span>
+            <div class="tc-t">Escala industrial ya probada</div>
+            <p class="tc-b">75 mil toneladas de fruta al año en Jacona, con más de 1,300 empleos directos declarados en mayo de 2025. El 75% de la producción va al mercado nacional y el resto se exporta a Estados Unidos, Japón, Canadá y países de Centro y Sudamérica.</p>
+            <p class="tc-s">Gobierno de Michoacán, 28 de noviembre de 2023 · Sedeco Michoacán, 4 de mayo de 2025</p>
+          </article>
+          <article class="tabcard mint"><span class="tab">Hecho</span>
+            <div class="tc-t">La agenda ambiental no es promesa, es infraestructura</div>
+            <p class="tc-b">Planta de tratamiento de aguas residuales propia usada en la industrialización de la fruta, 50% de energía solar declarado en 2023 y 80% de energía limpia declarado en 2025, más prácticas de agricultura regenerativa con productores de la región.</p>
+            <p class="tc-s">Gobierno de Michoacán, 28 de noviembre de 2023 · Sedeco Michoacán, 4 de mayo de 2025</p>
+          </article>
+          <article class="tabcard mint"><span class="tab">Hecho</span>
+            <div class="tc-t">El clima organizacional está medido y certificado</div>
+            <p class="tc-b">AGRANA Fruit México aparece entre las organizaciones certificadas por Great Place To Work México, con 92% de colaboradores que declaran que es un gran lugar para trabajar, contra 71% de una organización típica en México.</p>
+            <p class="tc-s">Great Place To Work México · ficha de organización certificada 2025</p>
+          </article>
+          <article class="tabcard mint"><span class="tab">Hecho</span>
+            <div class="tc-t">Portafolio ancho, no una sola línea</div>
+            <p class="tc-b">Fruta fresca, fruta congelada en bloque, preparados de fruta, rellenos, preparados salados y fruta reestructurada, para industria láctea, panificación, helados y congelados. Es un catálogo de soluciones a la medida, no un commodity.</p>
+            <p class="tc-s">Ficha de producto de AGRANA Fruit México en directorio industrial · mx.agrana.com</p>
+          </article>
+        </div>
+
+        <div class="card top-b">
+          <h3 class="h4">Por qué esto importa para el resto del documento</h3>
+          <p class="prose">Porque cambia la pregunta. Si la escala, la calidad, la relación con el campo, la agenda ambiental y el clima organizacional ya funcionan, entonces no hay nada que arreglar en el frente evidente y cualquier propuesta que empiece por ahí sobra. La pregunta que queda es otra, y es específicamente la de esta coyuntura: <strong>cuando un sitio maduro se convierte en tres, ¿cómo sabes cuál de los tres está financiando a los otros dos, y en qué momento lo sabes?</strong> Con un solo sitio esa pregunta no existía. A partir de la expansión, existe todos los meses.</p>
+        </div>
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 03 · EL MERCADO CAMBIÓ ============================ -->
+<section id="s03" class="view" aria-label="Sección 3">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">03</span> El mercado cambió</div>
+        <h1 class="sec-t" tabindex="-1">Cuatro cosas se movieron entre 2025 y 2027, y ninguna es opinión</h1>
+        <p class="sec-lede">Dos cambian el costo de producir, una cambia lo que tus clientes necesitan de ti, y otra cambia quién más está construyendo capacidad en México. Las cuatro están publicadas y tienen fecha.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="stats">
+          <div class="stat dark">
+            <div class="fig num">46<sup>h</sup></div>
+            <div class="stat-l">Jornada máxima semanal desde el 1 de enero de 2027. Después 44 en 2028, 42 en 2029 y 40 en 2030</div>
+            <div class="stat-s">DOF · 3 de marzo y 1 de mayo de 2026</div>
+          </div>
+          <div class="stat mint">
+            <div class="fig num">9<sup>h</sup></div>
+            <div class="stat-l">Tope de horas extra semanales, congelado en 2026 y 2027. Sube a 10 hasta 2028</div>
+            <div class="stat-s">Transitorio Cuarto del decreto del 1 de mayo de 2026</div>
+          </div>
+          <div class="stat cream">
+            <div class="fig num">8<sup>%</sup></div>
+            <div class="stat-l">IEPS sobre alimentos no básicos de 275 kcal o más por 100 g: helados y paletas, confitería, dulces de frutas, flanes, galletas y pan dulce</div>
+            <div class="stat-s">Ley del IEPS, artículo 2 · vigente 2026</div>
+          </div>
+          <div class="stat lime">
+            <div class="fig num">60<small>M€</small></div>
+            <div class="stat-l">Inversión de Döhler en una planta nueva de ingredientes en el Estado de México, en operación desde julio de 2026</div>
+            <div class="stat-s">Prensa especializada · julio y agosto de 2026</div>
+          </div>
+        </div>
+
+        <div class="g2">
+          <div>
+            <h3 class="h3">El techo legal de horas, año por año</h3>
+            <div class="svg-box">
+              <div class="pills">
+                <div class="pill-col"><span class="pill-v num">48</span><div class="pill off" style="height:74%"></div><span class="pill-l">2026<br>hoy</span></div>
+                <div class="pill-col"><span class="pill-v num">46</span><div class="pill on" style="height:71%"></div><span class="pill-l">2027<br>1 de enero</span></div>
+                <div class="pill-col"><span class="pill-v num">44</span><div class="pill" style="height:68%"></div><span class="pill-l">2028</span></div>
+                <div class="pill-col"><span class="pill-v num">42</span><div class="pill" style="height:65%"></div><span class="pill-l">2029</span></div>
+                <div class="pill-col"><span class="pill-v num">40</span><div class="pill" style="height:62%"></div><span class="pill-l">2030</span></div>
+              </div>
+              <p class="svg-cap">Jornada ordinaria máxima semanal, Transitorio Segundo del decreto publicado en el DOF el 1 de mayo de 2026. La barra en lima marca el primer escalón exigible. El eje no arranca en cero: la escala está comprimida para hacer legible una caída de ocho horas sobre una base de cuarenta y ocho.</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="h3">Qué se movió, en orden de impacto sobre tu operación</h3>
+            <div class="tabcards">
+              <article class="tabcard cream"><span class="tab">Hecho</span>
+                <div class="tc-t">Menos horas y, además, prueba electrónica</div>
+                <p class="tc-b">La reforma añadió al artículo 132 la obligación patronal de registrar electrónicamente la jornada de cada persona, con multas de 250 a 5,000 UMA. La STPS todavía no publica los lineamientos operativos. En un conflicto laboral, la carga de probar la jornada es del patrón.</p>
+                <p class="tc-s">DOF, 1 de mayo de 2026 · artículos 132 fr. XXXIV y 994</p>
+              </article>
+              <article class="tabcard cream"><span class="tab">Señal</span>
+                <div class="tc-t">Tus clientes están reformulando</div>
+                <p class="tc-b">Helados y paletas, confitería, dulces de frutas, flanes y galletas pagan 8% de IEPS al superar 275 kcal por 100 g. Organizaciones civiles propusieron subirlo a 20% en el Paquete Económico 2027. Es propuesta, no norma, y puede no prosperar.</p>
+                <p class="tc-s">Ley del IEPS art. 2 · Expansión, 1 y 2 de septiembre de 2026</p>
+              </article>
+              <article class="tabcard cream"><span class="tab">Señal</span>
+                <div class="tc-t">La materia prima la cotiza el exportador, no tú</div>
+                <p class="tc-b">México exportó más de 715 mil toneladas de berries en 2025 por cerca de 3,400 millones de dólares, con Michoacán al 29% de la producción nacional y la fresa al 54% del volumen. Cerca del 80% de lo exportado va a Estados Unidos.</p>
+                <p class="tc-s">Datos de industria publicados en agosto de 2026, con base en SIAP</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="card top-c">
+          <h3 class="h4">Cómo se encadenan las cuatro</h3>
+          <p class="prose">El IEPS y el etiquetado empujan a la industria láctea, de helados y de panificación a reformular. Reformular significa, del lado del proveedor de preparados, <strong>más variantes de receta, corridas más cortas y más cambios de línea</strong>. Más cambios de línea significa menos horas productivas por hora contratada. Y las horas contratadas bajan por ley el 1 de enero de 2027, con el tope de horas extra congelado ese mismo año. Los cuatro forzadores no son cuatro temas: son un solo efecto que se acumula sobre la misma variable.</p>
+          <p class="prose" style="margin-top:var(--space-4)">Ese efecto no lo inventamos nosotros y no es exclusivo de AGRANA: aplica a cualquier planta de transformación alimentaria intensiva en mano de obra en México. Lo que sí es propio de este caso es que coincide con una expansión a tres sitios y con la duplicación anunciada de la plantilla.</p>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 04 · AGRANA CAMBIÓ ============================ -->
+<section id="s04" class="view" aria-label="Sección 4">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">04</span> AGRANA cambió</div>
+        <h1 class="sec-t" tabindex="-1">Tres años en los que el grupo decidió apostar por tu área de negocio</h1>
+        <p class="sec-lede">La serie financiera que sigue es del grupo, no de México, y existe por una razón: AGRANA Beteiligungs-AG cotiza en la Bolsa de Viena y tiene que informarla. Léela junto a la línea de tiempo, porque las dos cuentan la misma historia desde dos alturas distintas.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="g2">
+          <div>
+            <h3 class="h3">El grupo, en cuatro cortes con fecha</h3>
+            <div class="svg-box">
+              <svg viewBox="0 0 520 250" role="img" aria-label="Evolución del EBIT del grupo AGRANA">
+                <defs>
+                  <linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#03B585" stop-opacity=".55"/>
+                    <stop offset="100%" stop-color="#BAF4E9" stop-opacity=".06"/>
+                  </linearGradient>
+                </defs>
+                <g stroke="#DCD4C9" stroke-width="1">
+                  <line x1="46" y1="200" x2="500" y2="200"/>
+                  <line x1="46" y1="150" x2="500" y2="150" stroke-dasharray="3 5"/>
+                  <line x1="46" y1="100" x2="500" y2="100" stroke-dasharray="3 5"/>
+                  <line x1="46" y1="50" x2="500" y2="50" stroke-dasharray="3 5"/>
+                </g>
+                <g font-family="Manrope,Arial" font-size="10" fill="#9A9086" text-anchor="end">
+                  <text x="40" y="204">0</text><text x="40" y="154">40</text>
+                  <text x="40" y="104">80</text><text x="40" y="54">120</text>
+                </g>
+                <path d="M96 149 L247 190 L398 198 L473 138 L473 200 L398 200 L247 200 L96 200 Z" fill="url(#gArea)"/>
+                <path d="M96 149 L247 190 L398 198 L473 138" fill="none" stroke="#03B585" stroke-width="2.5"
+                      stroke-linejoin="round"/>
+                <g fill="#FFFEFC" stroke="#039271" stroke-width="2.5">
+                  <circle cx="96" cy="149" r="5"/><circle cx="247" cy="190" r="5"/>
+                  <circle cx="398" cy="198" r="5"/>
+                </g>
+                <circle cx="473" cy="138" r="6" fill="#C9E265" stroke="#085E54" stroke-width="2.5"/>
+                <g font-family="Manrope,Arial" font-size="10.5" font-weight="700" fill="#272320" text-anchor="middle">
+                  <text x="96" y="138">83.0</text><text x="247" y="179">40.5</text>
+                  <text x="398" y="187">3.2</text><text x="473" y="125">90–110</text>
+                </g>
+                <g font-family="Manrope,Arial" font-size="10" fill="#756C63" text-anchor="middle">
+                  <text x="96" y="218">2023|24</text><text x="247" y="218">2024|25</text>
+                  <text x="398" y="218">2025|26</text><text x="473" y="218">2026|27</text>
+                  <text x="473" y="231" font-size="9" fill="#9A9086">guía</text>
+                </g>
+              </svg>
+              <p class="svg-cap">EBIT del grupo en millones de euros, ejercicios cerrados el 28 de febrero. El punto en lima no es un resultado: es la banda de guía que AGRANA elevó de 70–90 a 90–110 millones el 28 de septiembre de 2026, después de un primer semestre con EBIT de 63.5 millones contra 28.0 del año previo. El desplome de 2025|26 se explica por partidas excepcionales de 74.1 millones, incluido un deterioro de 46.0 millones en azúcar; el resultado operativo antes de excepcionales de ese año subió 6.2% a 81.2 millones.</p>
+              <div class="legend">
+                <span><i style="background:#039271"></i>EBIT reportado</span>
+                <span><i style="background:#C9E265"></i>Guía 2026|27, punto medio de la banda</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="h3">Línea de tiempo 2023–2026</h3>
+            <div class="tl">
+              <div class="tl-i">
+                <div class="tl-d">28 nov 2023</div>
+                <div class="tl-t">AGRANA adelanta inversiones en Michoacán</div>
+                <p class="tl-b">Reunión del equipo directivo con el gobernador y la Secretaría de Desarrollo Económico. Se informa consolidación de infraestructura con equipo para procesamiento de fruta y apoyos a productores michoacanos. Se declaran 75 mil toneladas anuales y 50% de energía solar.</p>
+                <p class="tl-s">Gobierno de Michoacán · comunicado desde Viena</p>
+              </div>
+              <div class="tl-i key">
+                <div class="tl-d">4 may 2025</div>
+                <div class="tl-t">15 millones de dólares y tres ubicaciones</div>
+                <p class="tl-b">En el Festival Michoacán de Origen se anuncia el plan de expansión operativa para Jacona, Zamora y Tangancícuaro, orientado a duplicar la plantilla y atender nuevos mercados. Se declaran más de 1,300 empleos directos y 80% de energía limpia.</p>
+                <p class="tl-s">Sedeco Michoacán, 4 de mayo de 2025</p>
+              </div>
+              <div class="tl-i">
+                <div class="tl-d">jun 2025</div>
+                <div class="tl-t">El grupo absorbe Austria Juice por completo</div>
+                <p class="tl-b">AGRANA adquiere la totalidad de la compañía austriaca de jugos, reforzando competencias en bases de bebida y sabores naturales dentro de Food &amp; Beverage Solutions.</p>
+                <p class="tl-s">Prensa sectorial, junio de 2025 · reiterado en llamada de resultados de enero de 2026</p>
+              </div>
+              <div class="tl-i">
+                <div class="tl-d">12 may 2026</div>
+                <div class="tl-t">FBS pasa a ser la mitad del grupo</div>
+                <p class="tl-b">Con el reporte anual 2025|26, Food &amp; Beverage Solutions llega a 50.9% de los ingresos del grupo contra 46.4% del año previo, y aporta el mayor resultado. La mejora de EBIT del segmento se atribuye en particular a Europa y a Norte y Sudamérica.</p>
+                <p class="tl-s">AGRANA Beteiligungs-AG · comunicado EQS del 12 de mayo de 2026</p>
+              </div>
+              <div class="tl-i key">
+                <div class="tl-d">9 sep 2026</div>
+                <div class="tl-t">Acuerda comprar esarom por unos 150 millones de euros</div>
+                <p class="tl-b">Fabricante austriaco de aromas y soluciones de bebida fundado en 1946, con unos 400 colaboradores y 112 millones de euros de facturación en 2025. Cierre previsto al inicio del ejercicio 2027|28, sujeto a autorizaciones de competencia.</p>
+                <p class="tl-s">AGRANA · comunicado del 9 de septiembre de 2026</p>
+              </div>
+              <div class="tl-i key">
+                <div class="tl-d">28 sep 2026</div>
+                <div class="tl-t">Sube la guía de EBIT del ejercicio en curso</div>
+                <p class="tl-b">EBIT de 28.1 millones en el segundo trimestre, 26.0% arriba del comparable. En el primer semestre, 63.5 millones contra 28.0. La banda anual pasa de 70–90 a 90–110 millones. El detalle por segmento se publica el 8 de octubre de 2026.</p>
+                <p class="tl-s">AGRANA · información privilegiada bajo el artículo 17 MAR</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="h3">Lo que dijo la dirección, textualmente</h3>
+        <div class="g2">
+          <figure class="quote">
+            <q>Con esarom no solo queremos ampliar nuestro portafolio, sino conectar competencias complementarias en una oferta conjunta más fuerte. Eso corresponde a la idea de fondo de ONE AGRANA: reunir competencias y crear valor como una sola empresa.</q>
+            <figcaption><b>Stephan Büttner</b>CEO de AGRANA Beteiligungs-AG · comunicado del 9 de septiembre de 2026. Traducción del alemán.</figcaption>
+          </figure>
+          <figure class="quote">
+            <q>Desde su planta en Jacona procesa frutas del campo michoacano y las transforma en insumos para diversas industrias como la láctea, de panificación, helados y alimentos congelados.</q>
+            <figcaption><b>Raymundo Gaona Pérez</b>Director General de AGRANA Fruit México, según el comunicado de la Secretaría de Desarrollo Económico de Michoacán del 4 de mayo de 2025. Paráfrasis oficial, no cita directa del propio directivo.</figcaption>
+          </figure>
+        </div>
+
+        <div class="tabcards c2">
+          <article class="tabcard dark"><span class="tab">Implicación</span>
+            <div class="tc-t">«Una sola empresa» tiene consecuencias operativas, no solo de discurso</div>
+            <p class="tc-b">Integrar competencias entre sitios y compañías adquiridas exige que los sitios se puedan comparar entre sí. Un grupo que compra aromas, jugos y preparados para venderlos «de una sola mano» necesita que cada planta reporte en el mismo lenguaje. México no queda fuera de ese estándar: queda dentro, y con tres sitios en lugar de uno.</p>
+            <p class="tc-s">Derivada del comunicado de esarom y del posicionamiento de FBS</p>
+          </article>
+          <article class="tabcard dark"><span class="tab">Implicación</span>
+            <div class="tc-t">La mejora del grupo en 2026|27 viene de la otra área de negocio</div>
+            <p class="tc-b">El salto de EBIT del primer semestre se atribuye a la recuperación de Agricultural Commodities &amp; Specialities, no a FBS. Un segmento que ya es la mitad del grupo y aporta el mayor resultado tiene menos margen para explicar un año plano. La presión por demostrar contribución sube, no baja.</p>
+            <p class="tc-s">Ad-hoc del 28 de septiembre de 2026 · lectura de LCG</p>
+          </article>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 05 · DE UNA PLANTA A UNA RED ============================ -->
+<section id="s05" class="view" aria-label="Sección 5">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">05</span> De una planta a una red</div>
+        <h1 class="sec-t" tabindex="-1">Tres municipios, treinta kilómetros y una ventana de cosecha que no se negocia</h1>
+        <p class="sec-lede">Jacona, Zamora y Tangancícuaro son los tres municipios fresícolas contiguos del mismo valle. La cercanía es la ventaja y también el problema: los tres sitios competirán por la misma fruta, en la misma semana, con la misma bolsa de mano de obra.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="g2">
+          <div class="svg-box">
+            <svg viewBox="0 0 480 300" role="img" aria-label="Esquema relacional de los tres sitios y la cuenca fresícola">
+              <defs>
+                <radialGradient id="bub" cx="35%" cy="30%">
+                  <stop offset="0%" stop-color="#BAF4E9"/><stop offset="65%" stop-color="#03B585"/>
+                  <stop offset="100%" stop-color="#085E54"/>
+                </radialGradient>
+                <radialGradient id="bub2" cx="35%" cy="30%">
+                  <stop offset="0%" stop-color="#E4F5B8"/><stop offset="70%" stop-color="#C9E265"/>
+                  <stop offset="100%" stop-color="#8FA83C"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="240" cy="150" rx="215" ry="128" fill="#DFF9F0" stroke="#7FE0C0"
+                       stroke-width="1.5" stroke-dasharray="5 5"/>
+              <text x="240" y="34" font-family="Manrope,Arial" font-size="11" font-weight="700"
+                    fill="#0A7568" text-anchor="middle" letter-spacing="1.4">CUENCA FRESÍCOLA ZAMORA–JACONA–TANGANCÍCUARO</text>
+              <line x1="240" y1="160" x2="120" y2="110" stroke="#9A9086" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="240" y1="160" x2="360" y2="112" stroke="#9A9086" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <circle cx="240" cy="160" r="58" fill="url(#bub)"/>
+              <text x="240" y="152" font-family="Manrope,Arial" font-size="14" font-weight="800"
+                    fill="#FFFEFC" text-anchor="middle">JACONA</text>
+              <text x="240" y="169" font-family="Manrope,Arial" font-size="10" fill="#DFF9F0"
+                    text-anchor="middle">Planta desde 1990</text>
+              <text x="240" y="183" font-family="Manrope,Arial" font-size="10" fill="#DFF9F0"
+                    text-anchor="middle">4 ha · 75 mil t/año</text>
+              <circle cx="120" cy="110" r="38" fill="url(#bub2)"/>
+              <text x="120" y="107" font-family="Manrope,Arial" font-size="12" font-weight="800"
+                    fill="#3A4517" text-anchor="middle">ZAMORA</text>
+              <text x="120" y="122" font-family="Manrope,Arial" font-size="9" fill="#3A4517"
+                    text-anchor="middle">Ampliación anunciada</text>
+              <circle cx="360" cy="112" r="38" fill="url(#bub2)"/>
+              <text x="360" y="103" font-family="Manrope,Arial" font-size="11" font-weight="800"
+                    fill="#3A4517" text-anchor="middle">TANGANCÍ-</text>
+              <text x="360" y="116" font-family="Manrope,Arial" font-size="11" font-weight="800"
+                    fill="#3A4517" text-anchor="middle">CUARO</text>
+              <text x="360" y="130" font-family="Manrope,Arial" font-size="9" fill="#3A4517"
+                    text-anchor="middle">Ampliación anunciada</text>
+              <rect x="150" y="238" width="180" height="34" rx="17" fill="#085E54"/>
+              <text x="240" y="259" font-family="Manrope,Arial" font-size="11" font-weight="700"
+                    fill="#BAF4E9" text-anchor="middle">Misma fruta · misma ventana · misma bolsa laboral</text>
+            </svg>
+            <p class="svg-cap"><strong>Esquema relacional, no mapa a escala.</strong> Las posiciones y los tamaños de los círculos son una representación cualitativa derivada del anuncio de expansión y de la geografía fresícola del valle, no un scoring numérico ni una ubicación cartográfica. No se publicó el reparto de la inversión entre los tres municipios, ni el tipo de instalación prevista en cada uno.</p>
+          </div>
+
+          <div>
+            <h3 class="h3">Por qué la contigüidad corta en dos direcciones</h3>
+            <p class="prose">Zamora, Jacona y Tangancícuaro son, históricamente, tres de los cuatro municipios fresícolas principales de Michoacán. Poner capacidad industrial en los tres acorta el trayecto entre corte y proceso, que en fruta blanda es exactamente donde se pierde rendimiento. Esa es la ventaja, y es grande.</p>
+            <p class="prose" style="margin-top:var(--space-4)">El costo es que los tres sitios no diversifican riesgo: lo concentran. Comparten temporada, comparten clima, comparten mercado laboral local y comparten la competencia por la fruta contra los exportadores de fresco, que cotizan en dólares. <strong>Tres sitios en el mismo valle no son tres apuestas: son una apuesta más grande sobre la misma variable.</strong></p>
+            <div class="tabcards" style="margin-top:var(--space-5)">
+              <article class="tabcard lime"><span class="tab">Hipótesis</span>
+                <div class="tc-t">La restricción de la temporada se vuelve de personas, no de tanques</div>
+                <p class="tc-b">La fresa de Michoacán se cosecha de noviembre a junio, con el pico concentrado en unos pocos meses. Históricamente, mayo y junio han llegado a concentrar cerca de 44% de la producción nacional de fresa en un año. Si el pico se atiende hoy con jornada extendida, el tope de 46 horas y 9 de tiempo extra en 2027 cambia la aritmética del pico antes de que la capacidad nueva esté corriendo.</p>
+                <p class="tc-s">Estacionalidad: análisis sectorial sobre datos SIAP-FAO. Cómo se atiende hoy el pico en AGRANA: no verificable públicamente.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="card top-a">
+          <h3 class="h4">Conteos públicos: lo que no vamos a convertir en tendencia</h3>
+          <p class="prose">La plantilla de AGRANA Fruit México aparece en fuentes públicas con cifras distintas según qué incluyan y cuándo se publicaron: <strong>1,168 personas atribuidas a 2024</strong> en una base de perfiles corporativos, y <strong>más de 1,300 empleos directos</strong> declarados por la dirección en mayo de 2025. A nivel de la región, AGRANA reporta más de 1,300 personas en el conjunto de sus cinco plantas de fruta de Norteamérica —cuatro en Estados Unidos y una en México—, una cifra que evidentemente mide otro universo.</p>
+          <p class="prose" style="margin-top:var(--space-4)">Las presentamos como rango, con fuente y fecha, y <strong>no construimos ninguna serie con ellas</strong>. Tampoco estimamos cuántas personas significa «duplicar la plantilla»: el anuncio no lo cuantificó y nosotros no lo vamos a inventar.</p>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 06 · BENCHMARK ============================ -->
+<section id="s06" class="view" aria-label="Sección 6">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">06</span> Benchmark competitivo</div>
+        <h1 class="sec-t" tabindex="-1">Quién está cerca de la fruta y quién está cerca del cliente</h1>
+        <p class="sec-lede">Elegimos las variables antes que las empresas. En preparados de fruta, lo que decide la rentabilidad de largo plazo no es el tamaño global: es dónde se transforma la fruta respecto de dónde se cosecha, y cuánta mano de obra mexicana consume esa transformación.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="svg-box">
+          <svg viewBox="0 0 560 360" role="img" aria-label="Cuadrante cualitativo de posicionamiento">
+            <defs>
+              <radialGradient id="q1" cx="35%" cy="30%"><stop offset="0%" stop-color="#BAF4E9"/><stop offset="70%" stop-color="#03B585"/><stop offset="100%" stop-color="#085E54"/></radialGradient>
+              <radialGradient id="q2" cx="35%" cy="30%"><stop offset="0%" stop-color="#F0EAE4"/><stop offset="70%" stop-color="#C2B8AB"/><stop offset="100%" stop-color="#756C63"/></radialGradient>
+            </defs>
+            <rect x="60" y="30" width="470" height="280" fill="#FFFEFC" stroke="#DCD4C9"/>
+            <line x1="295" y1="30" x2="295" y2="310" stroke="#DCD4C9" stroke-dasharray="4 4"/>
+            <line x1="60" y1="170" x2="530" y2="170" stroke="#DCD4C9" stroke-dasharray="4 4"/>
+            <text x="295" y="337" font-family="Manrope,Arial" font-size="11" font-weight="700" fill="#574F49" text-anchor="middle">Proximidad física a la materia prima agrícola  →</text>
+            <text x="-170" y="22" transform="rotate(-90)" font-family="Manrope,Arial" font-size="11" font-weight="700" fill="#574F49" text-anchor="middle">Amplitud de portafolio  →</text>
+            <circle cx="150" cy="95" r="42" fill="url(#q1)" opacity=".92"/>
+            <text x="150" y="92" font-family="Manrope,Arial" font-size="11" font-weight="800" fill="#FFFEFC" text-anchor="middle">Döhler</text>
+            <text x="150" y="107" font-family="Manrope,Arial" font-size="9" fill="#DFF9F0" text-anchor="middle">Edoméx · 2026</text>
+            <circle cx="430" cy="120" r="52" fill="url(#q1)"/>
+            <text x="430" y="112" font-family="Manrope,Arial" font-size="12" font-weight="800" fill="#FFFEFC" text-anchor="middle">AGRANA</text>
+            <text x="430" y="127" font-family="Manrope,Arial" font-size="9" fill="#DFF9F0" text-anchor="middle">Fruit México</text>
+            <text x="430" y="140" font-family="Manrope,Arial" font-size="9" fill="#DFF9F0" text-anchor="middle">Jacona · 1990</text>
+            <circle cx="175" cy="240" r="36" fill="url(#q2)"/>
+            <text x="175" y="238" font-family="Manrope,Arial" font-size="10" font-weight="800" fill="#272320" text-anchor="middle">Ingredion</text>
+            <text x="175" y="252" font-family="Manrope,Arial" font-size="8.5" fill="#3D3733" text-anchor="middle">Puratos</text>
+            <circle cx="345" cy="255" r="32" fill="url(#q2)"/>
+            <text x="345" y="253" font-family="Manrope,Arial" font-size="10" font-weight="800" fill="#272320" text-anchor="middle">Zentis</text>
+            <text x="345" y="267" font-family="Manrope,Arial" font-size="8.5" fill="#3D3733" text-anchor="middle">Frulact</text>
+            <text x="72" y="48" font-family="Manrope,Arial" font-size="9" fill="#9A9086">Ingrediente y sistema</text>
+            <text x="518" y="48" font-family="Manrope,Arial" font-size="9" fill="#9A9086" text-anchor="end">Campo y receta</text>
+          </svg>
+          <p class="svg-cap"><strong>Ubicación cualitativa derivada de las variables del análisis, no un scoring numérico.</strong> Las posiciones expresan el juicio de LCG sobre la evidencia pública recogida en esta pieza; no se calcularon con una fórmula ni con datos de desempeño. El tamaño de los círculos indica presencia en el mercado mexicano de preparados, no participación de mercado medida. Zentis y Frulact se incluyen como referentes globales de modelo: no localizamos evidencia pública de planta propia en México.</p>
+        </div>
+
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr>
+              <th>Jugador</th><th>Dónde transforma respecto del campo</th><th>Arquitectura de sitios</th>
+              <th>Exposición a la jornada mexicana</th><th>Qué publica</th>
+            </tr></thead>
+            <tbody>
+              <tr class="me">
+                <td class="co">AGRANA Fruit México<span class="badge">Prospecto</span></td>
+                <td>Dentro de la cuenca fresícola. 75 mil toneladas al año procesadas en Jacona, con fruta del campo michoacano</td>
+                <td>Un sitio desde 1990; tres anunciados en mayo de 2025 para Jacona, Zamora y Tangancícuaro</td>
+                <td>Alta y creciente: más de 1,300 empleos directos declarados, con duplicación anunciada de plantilla</td>
+                <td>Toneladas, empleos, energía limpia y destino de exportación. Ninguna métrica pública de ejecución</td>
+              </tr>
+              <tr>
+                <td class="co">Döhler México</td>
+                <td>Corredor logístico del centro del país, no en zona de cosecha. Ingredientes naturales, sabores y colorantes</td>
+                <td>Planta nueva en Soyaniquilpan, Estado de México, en operación desde julio de 2026, con segunda fase de colorantes naturales anunciada</td>
+                <td>Media: se reportaron alrededor de 200 empleos para la planta nueva</td>
+                <td>Inversión, empleos, tecnología declarada como única en su red global y mercados de destino</td>
+              </tr>
+              <tr>
+                <td class="co">Zentis</td>
+                <td>Modelo de proximidad al cliente industrial, no al campo</td>
+                <td class="na">Información pública no identificada sobre planta propia en México</td>
+                <td class="na">No aplica sin operación mexicana verificada</td>
+                <td>Cobertura de países y participación declarada en marcas lácteas globales, en reportes de industria</td>
+              </tr>
+              <tr>
+                <td class="co">Frulact</td>
+                <td>Preparados estabilizados con acompañamiento desde la siembra, declarado en su propio material</td>
+                <td class="na">Información pública no identificada sobre planta propia en México</td>
+                <td class="na">No aplica sin operación mexicana verificada</td>
+                <td>Capacidades de producto y de I+D. Propiedad de un fondo desde 2020</td>
+              </tr>
+              <tr>
+                <td class="co">Ingredion · Puratos</td>
+                <td>No transforman fruta: venden los sistemas de textura, estabilizantes y rellenos con los que otros la transforman</td>
+                <td>Red industrial establecida en México, con portafolio de ingredientes y de rellenos para panificación</td>
+                <td>Media, con perfil de planta química y de mezclas más que de manejo de fruta fresca</td>
+                <td>Portafolio técnico y documentación de aplicación. Sin métricas de ejecución por planta</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="scroll-hint">Desliza la tabla para ver todas las columnas.</p>
+
+        <div class="card top-a">
+          <h3 class="h4">La lectura</h3>
+          <p class="prose">AGRANA es el único del cuadro que tiene las dos cosas a la vez en México: <strong>está físicamente dentro de la cuenca donde se cosecha la fruta y tiene el portafolio ancho de una casa de soluciones a la medida.</strong> Esa combinación es difícil de replicar y es, con toda probabilidad, la razón por la que el grupo eligió expandir aquí en lugar de abastecer desde sus cuatro plantas de Estados Unidos.</p>
+          <p class="prose" style="margin-top:var(--space-4)">El movimiento a vigilar no está en el nicho ni en los proveedores de ingredientes: está arriba a la izquierda. <strong>Döhler acaba de poner cerca de cuatro veces tu inversión anunciada en una planta nueva, con tecnología que declara no operar en ningún otro punto de su red global, para abastecer «mercados de América».</strong> No compite por la fresa michoacana: compite por el mismo comprador de la industria láctea y de panificación, desde una planta nueva sin curva de aprendizaje que desandar.</p>
+          <p class="prose" style="margin-top:var(--space-4)">Frente a eso, el argumento ganador no es la cercanía al campo, que es evidente y que el cliente ya da por hecha. Es el que nadie en esta categoría publica hoy: <strong>rendimiento por lote, cumplimiento de especificación y velocidad de desarrollo de una receta nueva, medidos y demostrables.</strong> El primero que los tenga adentro no gana una discusión técnica: gana la renovación del contrato.</p>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 07 · IMPLICACIONES ============================ -->
+<section id="s07" class="view" aria-label="Sección 7">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">07</span> Implicaciones de ejecución</div>
+        <h1 class="sec-t" tabindex="-1">Seis consecuencias operativas de pasar de un sitio a tres</h1>
+        <p class="sec-lede">Ninguna requiere cambiar el modelo de negocio. Todas requieren decidir con un dato que hoy, con un solo sitio maduro, no hacía falta producir.</p>
+      </header>
+
+      <div class="sec-body">
+        <div class="tabcards c2">
+          <article class="tabcard cream"><span class="tab">Implicación 01</span>
+            <div class="tc-t">El indicador de planta deja de ser el indicador de compañía</div>
+            <p class="tc-b">Con un sitio son el mismo número. Con tres, el consolidado puede mejorar mientras Jacona subsidia a los nuevos, y eso solo se ve si existe un corte por sitio con reglas de asignación acordadas antes, no después.</p>
+          </article>
+          <article class="tabcard cream"><span class="tab">Implicación 02</span>
+            <div class="tc-t">El rendimiento de fruta se vuelve comparable, o no se vuelve nada</div>
+            <p class="tc-b">Kilos de producto terminado por kilo de fruta recibida es la métrica madre de esta industria. Medida con criterios distintos en tres sitios, deja de servir para decidir a dónde mandar el siguiente camión.</p>
+          </article>
+          <article class="tabcard cream"><span class="tab">Implicación 03</span>
+            <div class="tc-t">Duplicar plantilla es duplicar curva de aprendizaje, no solo nómina</div>
+            <p class="tc-b">El costo visible de contratar es el salario. El costo invisible es el periodo en que la persona nueva rinde menos y genera más variabilidad de proceso. Ese costo se multiplica si además hay que formar a tres equipos en paralelo.</p>
+          </article>
+          <article class="tabcard cream"><span class="tab">Implicación 04</span>
+            <div class="tc-t">Enero de 2027 convierte horas en presupuesto</div>
+            <p class="tc-b">Bajar de 48 a 46 sin reducir sueldos ni prestaciones, con el tope de horas extra congelado en 9, es un ejercicio de rediseño de turnos contra el perfil real de la temporada. Y el registro electrónico obliga a que la evidencia sea trazable y consistente con lo que se paga.</p>
+          </article>
+          <article class="tabcard cream"><span class="tab">Implicación 05</span>
+            <div class="tc-t">Más recetas a la medida significa más cambios de línea</div>
+            <p class="tc-b">La estrategia declarada del grupo va hacia soluciones integradas y a la medida, y el IEPS empuja a los clientes a reformular. Las dos fuerzas apuntan a corridas más cortas. El costo de un cambio de receta —tiempo, limpieza, merma de arranque— deja de ser marginal y pasa a ser una línea que hay que conocer por producto.</p>
+          </article>
+          <article class="tabcard cream"><span class="tab">Implicación 06</span>
+            <div class="tc-t">El grupo va a pedir el mismo lenguaje</div>
+            <p class="tc-b">«Reunir competencias y crear valor como una sola empresa» implica que las plantas se comparen entre sí. México compite internamente por carga de trabajo contra cuatro plantas hermanas en Estados Unidos. Esa conversación se gana con evidencia de ejecución, no con cercanía geográfica.</p>
+          </article>
+        </div>
+
+        <div class="panel">
+          <h3 class="h4">Las seis apuntan al mismo sitio</h3>
+          <p class="prose">Una <strong>unidad de medida común para tres sitios que hoy son uno</strong>, instalada antes de que los tres estén operando. No es un proyecto de tecnología. Es una definición de negocio —qué costos se asignan a qué sitio, con qué criterio y con qué periodicidad— que después se instrumenta. Hacerlo antes cuesta semanas. Hacerlo después, cuando ya hay tres contabilidades operativas con criterios propios, cuesta un año de conciliación.</p>
+        </div>
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 08 · IA Y AGENTES ============================ -->
+<section id="s08" class="view" aria-label="Sección 8">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">08</span> IA y agentes</div>
+        <h1 class="sec-t" tabindex="-1">Cuatro decisiones que hoy se toman con información que llega tarde</h1>
+        <p class="sec-lede">La receta no se toca y el criterio de calidad tampoco. Formular un preparado que aguante horneo, pH bajo y vida de anaquel es un oficio, y ningún modelo lo sustituye. Lo que sí se puede acelerar es todo lo que ocurre alrededor: cuánta fruta recibir, a qué sitio mandarla, en qué orden producir y con cuánta gente.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="console">
+          <div class="console-top">
+            <div class="console-ttl">Consola agéntica · casos de uso propuestos para AGRANA Fruit México</div>
+            <span class="console-tag">Ilustrativo</span>
+          </div>
+          <div class="agents">
+            <div class="agent-list" role="tablist" aria-label="Agentes propuestos" id="agentList"></div>
+            <div class="agent-p" id="agentPanel" role="tabpanel" aria-live="polite"></div>
+          </div>
+          <div class="rules">
+            <div class="rule"><b>Regla 1 · Primero la unidad de medida</b><span>El agente 01 es condición de los otros tres. Sin rendimiento comparable entre sitios, los demás optimizan dentro de un marco que nadie acordó.</span></div>
+            <div class="rule"><b>Regla 2 · Un dato, un dueño</b><span>Cada agente necesita una persona que valide su salida las primeras veces. Sin eso, la recomendación se ignora a la tercera semana y el proyecto muere solo.</span></div>
+            <div class="rule"><b>Regla 3 · Piloto de una temporada</b><span>Un sitio, una familia de producto, un indicador. Si no mueve el indicador en una temporada, se apaga y se documenta por qué. Medir primero, automatizar después.</span></div>
+          </div>
+        </div>
+
+        <div class="card top-c">
+          <p class="prose"><strong>Ninguno de estos casos promete un retorno y ninguno trae cifra de impacto.</strong> Cada uno declara la condición previa de datos que necesita, porque es ahí donde normalmente se rompen: no en el modelo, sino en que el dato de entrada no existe, no está limpio o no es consistente entre sitios. Decirlo por adelantado es más útil que prometer un porcentaje que no podemos sostener desde fuera.</p>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 09 · DATOS Y BIFURCACIONES ============================ -->
+<section id="s09" class="view" aria-label="Sección 9">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">09</span> Datos y ecosistema digital</div>
+        <h1 class="sec-t" tabindex="-1">Tres preguntas que no se pueden responder desde fuera, y qué cambia cada respuesta</h1>
+        <p class="sec-lede">Hay cosas que ninguna fuente pública contesta y que, sin embargo, cambian por completo el alcance de un proyecto. En vez de suponerlas, las planteamos como bifurcación: los escenarios plausibles, el trabajo que corresponde a cada uno, y en qué momento del prediagnóstico se resuelve.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="g3">
+          <div class="card top-a"><h3 class="h4">Lo que sí se ve desde fuera</h3><p class="prose" style="font-size:var(--text-sm)">Pertenencia a un grupo cotizado con reporting trimestral consolidado, planta de tratamiento de agua propia, programa de energía limpia con avance medido entre 2023 y 2025, certificación de clima laboral y una operación de exportación a cuatro continentes que obliga a trazabilidad documental.</p></div>
+          <div class="card top-a"><h3 class="h4">Lo que no se ve</h3><p class="prose" style="font-size:var(--text-sm)">Si ese aparato de información llega al piso de planta con la misma granularidad con que llega al reporte del grupo. Desde fuera es indistinguible: una operación con tablero diario por línea y una con cierre mensual consolidado se ven igual en un comunicado de prensa.</p></div>
+          <div class="card top-a"><h3 class="h4">Por qué importa ahora</h3><p class="prose" style="font-size:var(--text-sm)">Porque la diferencia entre las dos configuraciones son semanas de trabajo y, sobre todo, define si el primer entregable es un tablero de contribución por sitio o una integración previa. De esa respuesta depende el cronograma completo.</p></div>
+        </div>
+
+        <div class="card">
+          <h3 class="h4">Bifurcación A · El sistema de gestión frente a tres sitios</h3>
+          <p class="prose">¿La expansión va a operar sobre la misma instancia del sistema que hoy corre Jacona, o cada sitio nuevo arranca con su propia configuración?</p>
+          <div class="fork">
+            <div class="fork-b"><h5>Escenario A · instancia única</h5><p>El trabajo empieza el primer día en explotación: construir rendimiento y costo por sitio sobre datos que ya existen, con reglas de asignación acordadas con dirección y finanzas. El tablero llega en semanas.</p></div>
+            <div class="fork-b b"><h5>Escenario B · configuraciones paralelas</h5><p>El trabajo empieza por definir el catálogo maestro de producto, de fruta y de centro de costo antes de que los sitios nuevos generen historia propia. Es menos vistoso y vale más: evita un año de conciliación posterior.</p></div>
+          </div>
+          <p class="resolve">Determinar en cuál de los dos está la operación toma <strong>una sesión de dos horas con tu equipo de sistemas y de finanzas</strong>. Es la primera parada del estudio de factibilidad, y es la única pregunta de esta sección que no puede esperar: cada mes que los sitios nuevos operen sin catálogo común es un mes de historia que después habrá que traducir.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="h4">Bifurcación B · El origen de la fruta</h3>
+          <p class="prose">AGRANA declara públicamente prácticas de agricultura regenerativa con productores michoacanos, y el grupo describe un modelo de agricultura por contrato en varias geografías. Lo que no es público es qué proporción del abasto de Jacona es contrato firmado contra compra de temporada en mercado abierto.</p>
+          <div class="fork">
+            <div class="fork-b"><h5>Escenario A · predominio de contrato</h5><p>El volumen es previsible y el trabajo se concentra en rendimiento y en calidad de entrada: qué productor entrega qué grado, con qué variabilidad, y cómo se refleja eso en el rendimiento del lote.</p></div>
+            <div class="fork-b b"><h5>Escenario B · peso alto de mercado abierto</h5><p>El costo de materia prima queda expuesto a la cotización que fija el exportador de fresco en dólares. Entonces la pregunta útil es de cobertura y de decisión de compra en ventana, no de rendimiento de planta.</p></div>
+          </div>
+          <p class="resolve">Se resuelve con <strong>una muestra de recepciones de una temporada completa</strong>, cruzando origen, grado de entrada y rendimiento obtenido. No requiere acceso a sistemas: requiere los registros de recepción.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="h4">Bifurcación C · Cómo se atiende hoy el pico de temporada</h3>
+          <p class="prose">Esta es la que decide el tamaño del problema de 2027, y es la que menos se puede adivinar desde fuera. La fresa de Michoacán concentra su cosecha en una ventana estrecha; ninguna fuente pública dice con qué esquema de turnos la absorbe la planta.</p>
+          <div class="fork">
+            <div class="fork-b"><h5>Escenario A · el pico se absorbe con turnos</h5><p>Si el pico ya se cubre con rotación de turnos y personal eventual dentro de la jornada ordinaria, el escalón de 2027 es manejable y el trabajo es de optimización fina de la malla de turnos.</p></div>
+            <div class="fork-b b"><h5>Escenario B · el pico se absorbe con tiempo extra</h5><p>Si el pico depende de tiempo extraordinario habitual, el escalón de 2027 no es de dos horas: es estructural, porque el tope de extras queda congelado en 9 el mismo año. Entonces el rediseño de turnos es la prioridad uno y tiene fecha límite.</p></div>
+          </div>
+          <p class="resolve">Se resuelve con <strong>doce meses de registro de asistencia contra volumen procesado por semana</strong>. Es el primer cruce que haríamos, y es también el insumo que el registro electrónico de jornada va a exigir de todas formas a partir del 1 de enero de 2027.</p>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 10 · OUTLOOK ============================ -->
+<section id="s10" class="view" aria-label="Sección 10">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">10</span> Outlook 2026–2029</div>
+        <h1 class="sec-t" tabindex="-1">Tres escenarios, sin predicciones numéricas</h1>
+        <p class="sec-lede">No hay proyecciones de venta aquí: no tenemos base para hacerlas y no las vamos a inventar. Lo que sí se puede describir es cómo se comportaría cada escenario en términos operativos, y qué haría falta para estar listo.</p>
+      </header>
+
+      <div class="sec-body">
+        <div class="g3">
+          <div class="card top-a">
+            <h3 class="h4">Escenario base</h3>
+            <p class="prose" style="font-size:var(--text-sm)">La expansión se ejecuta en el calendario anunciado. FBS sigue siendo la mitad del grupo y crece con normalidad. El IEPS se mantiene en 8% y la jornada baja a 46 y luego a 44 sin sobresaltos. La cuenca fresícola mantiene volumen.</p>
+            <p class="prose" style="font-size:var(--text-sm);margin-top:var(--space-4)"><strong>Qué significaría:</strong> el crecimiento vendría de mezcla y de rendimiento, no de tonelaje. Ganar un punto de rendimiento sobre 75 mil toneladas valdría más que sumar un cuarto sitio.</p>
+          </div>
+          <div class="card top-b">
+            <h3 class="h4">Escenario de aceleración</h3>
+            <p class="prose" style="font-size:var(--text-sm)">La integración de Austria Juice y esarom baja a la operación y México puede ofrecer preparado, base de bebida y aroma desde una sola casa. La reformulación por IEPS y etiquetado abre proyectos de desarrollo con clientes que antes compraban estándar.</p>
+            <p class="prose" style="font-size:var(--text-sm);margin-top:var(--space-4)"><strong>Qué significaría:</strong> más referencias, más corridas cortas y más desarrollo simultáneo. La ventaja se vuelve la velocidad de desarrollo y de cambio de línea, que es exactamente donde hace falta medición fina.</p>
+          </div>
+          <div class="card top-c">
+            <h3 class="h4">Escenario de presión</h3>
+            <p class="prose" style="font-size:var(--text-sm)">Prospera la propuesta de subir el IEPS de 8% a 20% y los clientes de helado y galleta recortan volumen. Döhler y otros entrantes compiten por el mismo comprador industrial desde plantas nuevas. La jornada llega a 44 en 2028 y a 42 en 2029 con la plantilla ya duplicada.</p>
+            <p class="prose" style="font-size:var(--text-sm);margin-top:var(--space-4)"><strong>Qué significaría:</strong> la conversación con cada cliente y con el propio grupo se decidiría con evidencia de ejecución por sitio. Quien no la tenga negocia con cercanía declarada, que es el argumento más débil de todos.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3 class="h4">Lo que los tres escenarios comparten</h3>
+          <p class="prose">En los tres, la capacidad que decide el resultado es la misma: <strong>saber qué rinde cada sitio, cada fruta y cada receta, con el mismo criterio y sin esperar al cierre.</strong> Es la única inversión que rinde igual si el mercado acelera que si se pone difícil, y la única que se puede instalar antes de que los tres sitios estén corriendo en lugar de después.</p>
+        </div>
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 11 · HIPÓTESIS ============================ -->
+<section id="s11" class="view" aria-label="Sección 11">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">11</span> Hipótesis</div>
+        <h1 class="sec-t" tabindex="-1">Seis hipótesis formuladas para poder ser refutadas</h1>
+        <p class="sec-lede">Cada una trae el indicador que la prueba, la información que haría falta y el área que la contesta. Ninguna trae impacto cuantificado: cuantificar sin datos internos sería inventar. Si en la conversación resulta que cuatro ya están resueltas, el alcance se reduce a dos y el proyecto es más barato.</p>
+      </header>
+
+      <div class="sec-body">
+        <div class="g2">
+
+          <article class="hyp"><span class="hyp-n">H1</span>
+            <h3 class="hyp-t">El rendimiento de fruta varía más entre lotes y orígenes de lo que supone el estándar de costeo</h3>
+            <dl class="hyp-f">
+              <div><dt>Indicador</dt><dd>Kilos de producto terminado por kilo de fruta recibida, por lote, origen y variedad, contra el rendimiento estándar usado para costear.</dd></div>
+              <div><dt>Información necesaria</dt><dd>Registros de recepción con grado de entrada, órdenes de producción y merma por lote de una temporada completa.</dd></div>
+              <div><dt>Impacto posible</dt><dd>Sobre el costo de materia prima, que en esta industria es la línea dominante. No lo cuantificamos sin datos.</dd></div>
+              <div><dt>Área</dt><dd>Abasto, Producción y Costos.</dd></div>
+            </dl>
+          </article>
+
+          <article class="hyp"><span class="hyp-n">H2</span>
+            <h3 class="hyp-t">El costo real de un cambio de receta no está costeado como costo, sino absorbido como tiempo de planta</h3>
+            <dl class="hyp-f">
+              <div><dt>Indicador</dt><dd>Minutos de paro por cambio, consumo de limpieza y merma de arranque, por familia de producto y por secuencia de cambio.</dd></div>
+              <div><dt>Información necesaria</dt><dd>Bitácora de producción con hora de inicio y fin por orden, secuencia real de corridas y registro de merma de arranque.</dd></div>
+              <div><dt>Impacto posible</dt><dd>Sobre capacidad efectiva y sobre el precio de las referencias de bajo volumen.</dd></div>
+              <div><dt>Área</dt><dd>Producción, Planeación y Calidad.</dd></div>
+            </dl>
+          </article>
+
+          <article class="hyp"><span class="hyp-n">H3</span>
+            <h3 class="hyp-t">El pico de temporada se absorbe hoy con un esquema de horas que el calendario de 2027 vuelve inviable</h3>
+            <dl class="hyp-f">
+              <div><dt>Indicador</dt><dd>Horas contratadas contra horas de proceso requeridas, por semana del año y por turno, con y sin tiempo extraordinario.</dd></div>
+              <div><dt>Información necesaria</dt><dd>Doce meses de registro de asistencia, volumen procesado por semana y plantilla eventual contratada por temporada.</dd></div>
+              <div><dt>Impacto posible</dt><dd>Sobre costo de nómina y sobre riesgo de cumplimiento a partir del 1 de enero de 2027.</dd></div>
+              <div><dt>Área</dt><dd>Capital Humano y Operación de planta.</dd></div>
+            </dl>
+          </article>
+
+          <article class="hyp"><span class="hyp-n">H4</span>
+            <h3 class="hyp-t">La curva de aprendizaje del personal nuevo no está presupuestada como costo de la expansión</h3>
+            <dl class="hyp-f">
+              <div><dt>Indicador</dt><dd>Productividad y variabilidad de proceso por antigüedad de la persona, y tiempo hasta alcanzar el estándar del puesto.</dd></div>
+              <div><dt>Información necesaria</dt><dd>Fecha de ingreso cruzada con indicadores de línea, registros de retrabajo y plan de capacitación vigente.</dd></div>
+              <div><dt>Impacto posible</dt><dd>Sobre el retorno real de los 15 millones anunciados, si la capacidad tarda más de lo previsto en rendir.</dd></div>
+              <div><dt>Área</dt><dd>Capital Humano, Producción y Calidad.</dd></div>
+            </dl>
+          </article>
+
+          <article class="hyp"><span class="hyp-n">H5</span>
+            <h3 class="hyp-t">La contribución por cliente varía más que el margen que se le cobra, por costo de servir y de desarrollo</h3>
+            <dl class="hyp-f">
+              <div><dt>Indicador</dt><dd>Margen por cliente después de costo de desarrollo de receta, tamaño de corrida, frecuencia de cambio y logística de entrega.</dd></div>
+              <div><dt>Información necesaria</dt><dd>Venta y volumen por cliente y referencia, horas de desarrollo por proyecto y costo logístico por entrega.</dd></div>
+              <div><dt>Impacto posible</dt><dd>Sobre la mezcla de portafolio y sobre a quién conviene dedicar capacidad nueva.</dd></div>
+              <div><dt>Área</dt><dd>Comercial, Desarrollo y Finanzas.</dd></div>
+            </dl>
+          </article>
+
+          <article class="hyp"><span class="hyp-n">H6</span>
+            <h3 class="hyp-t">Los tres sitios van a generar criterios de medición distintos si no se define uno antes de arrancar</h3>
+            <dl class="hyp-f">
+              <div><dt>Indicador</dt><dd>Existencia y consistencia de catálogo maestro de producto, de fruta y de centro de costo entre los tres sitios previstos.</dd></div>
+              <div><dt>Información necesaria</dt><dd>Configuración del sistema de gestión, plan de arranque de los sitios nuevos y definición vigente de centros de costo.</dd></div>
+              <div><dt>Impacto posible</dt><dd>Sobre el tiempo hasta tener comparabilidad. Es la hipótesis con fecha de caducidad: pierde valor cada mes que pasa.</dd></div>
+              <div><dt>Área</dt><dd>Sistemas, Finanzas y Dirección General.</dd></div>
+            </dl>
+          </article>
+
+        </div>
+
+        <div class="card top-b">
+          <h3 class="h4">Cómo se usan</h3>
+          <p class="prose">En la conversación de 45 minutos las revisamos una por una y tú dices cuáles ya tienes resueltas. Las que sobrevivan definen el alcance del estudio de factibilidad. Las que no, se descartan y no vuelven a aparecer. <strong>Si están mal planteadas, esa información también nos sirve</strong> —y te ahorra un proyecto que no necesitas.</p>
+        </div>
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 12 · PREDIAGNÓSTICO ============================ -->
+<section id="s12" class="view" aria-label="Sección 12">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">12</span> Prediagnóstico</div>
+        <h1 class="sec-t" tabindex="-1">Cómo se validan las seis hipótesis en semanas, no en meses</h1>
+        <p class="sec-lede">El Estudio de Factibilidad es el marco fijo con el que London Consulting Group entra a una compañía. Son siete inputs y un entregable. Lo único que cambia de cuenta a cuenta es el alcance y el acceso dentro de los dos primeros.</p>
+      </header>
+
+      <div class="sec-body">
+        <div class="inputs">
+          <div class="inp"><span class="inp-n num">01</span><div>
+            <h5>Alcance y estrategia del estudio</h5>
+            <p>Entendimiento de los retos estratégicos, definición de alcance por áreas, responsables y ubicación geográfica, designación del <em>sponsor</em> del estudio y entendimiento del modelo de gobierno: consejo, socios y tomadores de decisión.
+            <span class="mine"><b>Para AGRANA Fruit México:</b> definir si el alcance entra por rendimiento y costo de transformación en Jacona, por el arranque de los sitios de Zamora y Tangancícuaro, o por ambos. Y entender cómo se articula la decisión entre la dirección en México y el gobierno corporativo de Food &amp; Beverage Solutions.</span></p>
+          </div></div>
+
+          <div class="inp"><span class="inp-n num">02</span><div>
+            <h5>Recolección de información básica</h5>
+            <p>Firma de NDA, inducción general, organigramas, estados financieros, indicadores de juntas directivas y operativas, manuales de proceso y sistemas de calidad, y reunión de perfilamiento. Aquí se necesita acceso a las bases de datos; sin eso el ejercicio se queda en observación y pierde la mitad de su valor.
+            <span class="mine"><b>Para AGRANA Fruit México:</b> registros de recepción de fruta con origen y grado, órdenes de producción con rendimiento y merma por lote, bitácora de cambios de línea y doce meses de registro de asistencia. Esos cuatro archivos son los que más pesan.</span></p>
+          </div></div>
+
+          <div class="inp"><span class="inp-n num">03</span><div>
+            <h5>Comunicación y entrevistas</h5>
+            <p>Diseño y acuerdo del plan de entrevistas con apoyo del <em>sponsor</em>, <em>kick off</em> oficial con objetivos, alcance y factores clave de éxito, ejecución de las entrevistas y reuniones de validación de oportunidades. Los mandos medios y el personal de piso saben dónde está el problema mucho antes que cualquier reporte.</p>
+          </div></div>
+
+          <div class="inp"><span class="inp-n num">04</span><div>
+            <h5>Gemba Walk</h5>
+            <p><em>Gemba</em> significa «el lugar real» en japonés: donde el trabajo ocurre y donde se genera el valor. Recorrido estructurado por recepción, proceso, cámaras y embarque para observar el proceso donde sucede, no como lo describe un manual. Se observan flujos de fruta y de personas, tiempos de ciclo, esperas, manejo de merma y cambios de línea — y se pregunta a quien ejecuta la tarea, no a quien la supervisa. La distancia entre el proceso documentado y el real es, casi siempre, donde está el dinero.</p>
+          </div></div>
+
+          <div class="inp"><span class="inp-n num">05</span><div>
+            <h5>Estadística agéntica</h5>
+            <p>Con las bases que comparte el cliente se ejecutan estudios estadísticos apoyados en inteligencia artificial agéntica para identificar las principales áreas de oportunidad. Los agentes cruzan recepción, producción, merma, inventario y nómina buscando patrones que no se ven revisando cada base por separado: dispersión de rendimiento entre orígenes de fruta, correlación entre secuencia de corridas y merma, comportamientos atípicos por turno y por semana de temporada.</p>
+          </div></div>
+
+          <div class="inp"><span class="inp-n num">06</span><div>
+            <h5>Nivel de Madurez Organizacional</h5>
+            <p>Mide la capacidad de la empresa para la mejora continua. A mayor madurez, mayor eficiencia en calidad y en uso de recursos. Se evalúan tres dimensiones —personas y cultura, procesos y estructuras, y tecnología— con <em>benchmarks</em> operativos y financieros de empresas similares. El resultado no es una calificación: es el punto de partida contra el que se mide el avance del proyecto.</p>
+          </div></div>
+
+          <div class="inp"><span class="inp-n num">07</span><div>
+            <h5>Growth Management</h5>
+            <p>Encuesta que mide la mentalidad y el <em>mindset</em> de los líderes junto con los aspectos organizacionales clave para el éxito de la compañía. Evalúa once elementos agrupados en cuatro bloques, con 68 reactivos en total.</p>
+          </div></div>
+
+          <div class="inp" style="background:var(--green-800);color:var(--text-on-dark);box-shadow:none">
+            <span class="inp-n num" style="color:var(--lime)">→</span><div>
+            <h5 style="color:var(--neutral-0)">El entregable · Propuesta de proyecto</h5>
+            <p style="color:rgba(242,238,235,.86)">No es un input: es lo que se construye sobre los siete anteriores y las oportunidades identificadas. Contiene oportunidades cuantificadas en pesos, beneficios esperados, metodología de implementación, cronograma, inversión y ROI. <strong style="color:#fff">Si las oportunidades no justifican el proyecto, se dice.</strong> Ese también es un resultado válido del estudio.</p>
+          </div></div>
+        </div>
+
+        <div class="g2">
+          <div>
+            <h3 class="h3">Los cinco niveles de madurez organizacional</h3>
+            <div class="tbl-wrap"><table style="min-width:420px">
+              <thead><tr><th>Nivel</th><th>Nombre</th><th>Descripción</th></tr></thead>
+              <tbody>
+                <tr><td class="num co">01</td><td class="co">Inicial</td><td>Opera sin marco estructurado, con procesos esporádicos y resultados inconsistentes.</td></tr>
+                <tr><td class="num co">02</td><td class="co">Emergente</td><td>Reconoce la importancia de estandarizar, pero sin implementación consistente.</td></tr>
+                <tr><td class="num co">03</td><td class="co">Definido</td><td>Procesos estandarizados y documentados, aplicados con regularidad.</td></tr>
+                <tr><td class="num co">04</td><td class="co">Gestionado</td><td>Gestión basada en métricas y datos, con ajustes predictivos.</td></tr>
+                <tr><td class="num co">05</td><td class="co">Optimizado</td><td>Lidera en mejora continua e innovación, con alta adaptabilidad.</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div>
+            <h3 class="h3">Growth Management · cuatro bloques, 68 reactivos</h3>
+            <div class="tbl-wrap"><table style="min-width:420px">
+              <thead><tr><th>Bloque</th><th>Reactivos</th><th>Peso</th></tr></thead>
+              <tbody>
+                <tr><td class="co">Estrategia y objetivos</td><td class="num">16</td><td class="num">30%</td></tr>
+                <tr><td class="co">Liderazgo y cultura</td><td class="num">19</td><td class="num">30%</td></tr>
+                <tr><td class="co">Adaptabilidad y cambio</td><td class="num">16</td><td class="num">30%</td></tr>
+                <tr><td class="co">Digitalización y eficiencia operativa</td><td class="num">17</td><td class="num">10%</td></tr>
+              </tbody>
+            </table></div>
+            <p class="note" style="margin-top:var(--space-3)">Mide alineación entre objetivos individuales, de equipo y estrategia; calidad del liderazgo y su impacto en clima y compromiso; capacidad de adaptarse al cambio y sostener la mejora continua; y adopción de herramientas digitales y su contribución al logro de objetivos.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3 class="h4">Dónde empieza en tu caso</h3>
+          <p class="prose">La primera parada es la <strong>bifurcación A de la sección 09</strong>: una sesión de dos horas con sistemas y finanzas para determinar si la expansión va a correr sobre una instancia única o sobre configuraciones paralelas. De esa respuesta depende el cronograma completo, y es la única pregunta que no podemos contestar desde fuera. También es la única que pierde valor cada mes que pasa.</p>
+        </div>
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 13 · CASOS DE ÉXITO ============================ -->
+<section id="s13" class="view" aria-label="Sección 13">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">13</span> Casos de éxito</div>
+        <h1 class="sec-t" tabindex="-1">Cuatro compañías que viven la misma física de negocio</h1>
+        <p class="sec-lede">No son casos de sector adyacente: son casos del mismo problema. Materia prima biológica con ventana propia, transformación industrial intensiva en mano de obra, rendimiento que se gana o se pierde en horas, y un cliente que exige especificación constante. Los retornos están publicados por London Consulting Group.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <article class="case">
+          <div class="case-h">
+            <div>
+              <div class="case-name">Panovo · Grupo PROAN</div>
+              <p class="case-meta">Agroindustria alimentaria con producción biológica continua · Jalisco</p>
+            </div>
+            <div class="roi"><div class="fig num">3.8<sup>:1</sup></div><span>Retorno sobre la inversión</span></div>
+          </div>
+          <div class="case-b">
+            <p class="case-why">Es el caso más cercano a tu operación de los cuatro, y por eso lo ponemos primero: una agroindustria mexicana cuya materia prima es biológica y no se puede pausar, con transformación industrial, escala grande y una operación que vive en el mismo occidente del país. La mecánica diaria es la misma que la tuya: un insumo que llega cuando llega y con la calidad que trae, un proceso que tiene que absorberlo sin parar, y un rendimiento que se decide en el piso de planta.</p>
+            <p class="case-why">En el video, la propia dirección de la compañía cuenta cómo fue el proyecto. Son cinco minutos y vale más que cualquier cosa que podamos escribir nosotros aquí.</p>
+            <div class="vid">
+              <video controls preload="none" playsinline poster="assets/panovo-poster.jpg" id="panovoVid">
+                <source src="assets/panovo-growth-stories.mp4" type="video/mp4">
+                <source src="./assets/panovo-growth-stories.mp4" type="video/mp4">
+                <source src="panovo-growth-stories.mp4" type="video/mp4">
+              </video>
+              <div class="vid-cap">Growth Stories · Episodio 2 · Panovo, Grupo PROAN. <span id="vidFall"></span></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="g3" style="margin-top:var(--space-6)">
+          <article class="case">
+            <div class="case-h" style="padding:var(--space-5)">
+              <div><div class="case-name" style="font-size:var(--text-md)">Sun Berries</div>
+                <p class="case-meta">Agroindustria de berries</p></div>
+              <div class="roi" style="min-width:110px;padding:var(--space-3) var(--space-4)"><div class="fig num" style="font-size:32px">8.6<sup>:1</sup></div><span>ROI</span></div>
+            </div>
+            <div class="case-b" style="padding:var(--space-5)">
+              <p class="case-why" style="margin:0">La misma fruta que entra a tu planta, vista desde el otro lado de la báscula. Un proyecto en el lado agrícola de la berry mexicana: ventana de cosecha, variabilidad de calidad de entrada y costo de jornal. Conocer cómo se comporta el campo es parte de saber por qué un lote rinde distinto que otro.</p>
+            </div>
+          </article>
+          <article class="case">
+            <div class="case-h" style="padding:var(--space-5)">
+              <div><div class="case-name" style="font-size:var(--text-md)">Grupo Los Cerritos</div>
+                <p class="case-meta">Agroindustria</p></div>
+              <div class="roi" style="min-width:110px;padding:var(--space-3) var(--space-4)"><div class="fig num" style="font-size:32px">4.4<sup>:1</sup></div><span>ROI</span></div>
+            </div>
+            <div class="case-b" style="padding:var(--space-5)">
+              <p class="case-why" style="margin:0">Agroindustria mexicana con integración entre campo y proceso. El paralelo está en la coordinación entre lo que el campo entrega y lo que la planta necesita recibir: dos calendarios distintos que tienen que encontrarse todos los días de la temporada.</p>
+            </div>
+          </article>
+          <article class="case">
+            <div class="case-h" style="padding:var(--space-5)">
+              <div><div class="case-name" style="font-size:var(--text-md)">Pinsa</div>
+                <p class="case-meta">Proceso alimentario industrial</p></div>
+              <div class="roi" style="min-width:110px;padding:var(--space-3) var(--space-4)"><div class="fig num" style="font-size:32px">4.3<sup>:1</sup></div><span>ROI</span></div>
+            </div>
+            <div class="case-b" style="padding:var(--space-5)">
+              <p class="case-why" style="margin:0">Planta de proceso alimentario intensiva en mano de obra, con materia prima de captura estacional y exigencia de inocuidad de exportación. El paralelo es el de una operación cuyo resultado depende de cuántas horas-persona se necesitan para transformar una tonelada, que es exactamente la variable que cambia en enero de 2027.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="note" style="margin-top:var(--space-5)">Retornos publicados por London Consulting Group en <a href="https://londoncg.mx/growth-stories" target="_blank" rel="noopener">londoncg.mx/growth-stories</a>. Los resultados detallados y la carta de recomendación de cualquiera de los cuatro se comparten a solicitud; no los reproducimos aquí para no citar de memoria lo que corresponde leer en la fuente.</p>
+
+        <div class="creds">
+          <div class="cred"><div class="fig num">1<sup>:1</sup></div>
+            <p>Retorno sobre la inversión <strong>garantizado por contrato</strong> en todo proyecto de London Consulting Group.</p></div>
+          <div class="cred"><div class="fig num">5<sup>:1</sup></div>
+            <p>Promedio histórico de retorno de la firma sobre la inversión del cliente.</p></div>
+          <div class="cred"><div class="fig num" style="font-size:38px">Metodología</div>
+            <p>Metodología London. Los casos y las cartas de recomendación de nuestros clientes están publicados en <a href="https://londoncg.mx/growth-stories" target="_blank" rel="noopener">growth-stories</a>.</p></div>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 14 · MÉTODO Y FUENTES ============================ -->
+<section id="s14" class="view" aria-label="Sección 14">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">14</span> Método y fuentes</div>
+        <h1 class="sec-t" tabindex="-1">Qué sabemos, cómo lo sabemos y qué no pudimos saber</h1>
+        <p class="sec-lede">Esta sección existe porque una pieza de análisis vale lo que vale su peor afirmación. Aquí está la clasificación que usamos, las fuentes completas y, sobre todo, lo que no se puede sostener con información pública.</p>
+      </header>
+
+      <div class="sec-body">
+
+        <div class="klass">
+          <div class="kl"><b>Hecho</b><span>Información respaldada por una fuente identificable y fechada.</span></div>
+          <div class="kl"><b>Señal</b><span>Indicio de tendencia que por sí solo no demuestra una conclusión.</span></div>
+          <div class="kl"><b>Hipótesis</b><span>Interpretación derivada de los hechos. Refutable por definición.</span></div>
+          <div class="kl"><b>Implicación</b><span>Qué podría significar esa hipótesis para la operación.</span></div>
+        </div>
+
+        <div>
+          <h3 class="h3">Limitaciones declaradas</h3>
+          <div class="lims">
+            <div class="lim"><b>No existe una sola cifra financiera pública de AGRANA Fruit México.</b><span>Ni ingresos, ni margen, ni costo de materia prima, ni merma, ni rotación. La entidad mexicana no tiene obligación de reporte público. Todas las cifras financieras de esta pieza son del grupo AGRANA Beteiligungs-AG consolidado, y el grupo no desglosa México. Esta pieza no estima ninguna.</span></div>
+            <div class="lim"><b>No sabemos cómo se reparten los 15 millones de dólares entre los tres municipios.</b><span>El anuncio de mayo de 2025 no especificó el reparto, el tipo de instalación prevista en cada sitio, ni el calendario de arranque. Tampoco hemos localizado un comunicado posterior que confirme avance de obra. Todo lo que esta pieza dice sobre «tres sitios operando» es una lectura del anuncio, no un hecho consumado.</span></div>
+            <div class="lim"><b>«Duplicar la plantilla» no está cuantificado y no lo cuantificamos.</b><span>La fuente dice que el crecimiento está orientado a duplicar la plantilla laboral. No dice de qué base parte, en qué plazo, ni si incluye personal eventual de temporada. No inferimos un número.</span></div>
+            <div class="lim"><b>Los conteos de plantilla no coinciden entre fuentes y no forman una serie.</b><span>1,168 personas atribuidas a 2024 en una base de perfiles corporativos; más de 1,300 empleos directos declarados por la dirección en mayo de 2025; más de 1,300 personas para el conjunto de las cinco plantas de fruta de Norteamérica según el propio sitio del grupo. Miden universos distintos. Se presentan como rango y no se usan para construir ninguna tendencia.</span></div>
+            <div class="lim"><b>No sabemos qué sistema de gestión opera la planta ni con qué granularidad.</b><span>Por eso la sección 09 lo plantea como bifurcación y no como carencia. Lo mismo aplica al esquema de turnos con el que se atiende hoy el pico de temporada y a la proporción de fruta por contrato contra mercado abierto.</span></div>
+            <div class="lim"><b>El encadenamiento IEPS → reformulación → más cambios de línea es una inferencia sectorial.</b><span>Es coherente con la norma vigente y con el comportamiento observable de la industria, pero no hemos visto evidencia pública de que los clientes de AGRANA en México hayan reformulado por esa razón. Se presenta como señal, no como hecho.</span></div>
+            <div class="lim"><b>La cifra de 75 mil toneladas es de noviembre de 2023.</b><span>Es el dato de volumen más confiable que localizamos y no encontramos una actualización posterior. Puede haber cambiado. Se cita con su fecha y no se proyecta.</span></div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="h3">Fuentes</h3>
+          <ol class="src">
+            <li><b>Secretaría de Desarrollo Económico de Michoacán</b> · «Michoacán afirma apoyo en fuerza productiva dentro del Festival Michoacán de Origen», 4 de mayo de 2025. Plan de expansión de 15 millones de dólares para Jacona, Zamora y Tangancícuaro, duplicación de plantilla, más de 1,300 empleos directos, 75% de producción al mercado nacional, 80% de energía limpia. Replicado por Quadratín Michoacán el mismo día. <a href="https://sedeco.michoacan.gob.mx/michoacan-afirma-apoyo-en-fuerza-productiva-dentro-del-festival-michoacan-de-origen-sedeco/" target="_blank" rel="noopener">sedeco.michoacan.gob.mx</a></li>
+            <li><b>Gobierno del Estado de Michoacán</b> · «Agrana Fruit compromete nuevas inversiones para la industria agroalimentaria de Michoacán», 28 de noviembre de 2023. Cuatro hectáreas, planta de tratamiento de agua, 50% de energía solar, 75 mil toneladas de fruta procesadas al año. <a href="https://michoacan.gob.mx/noticias/agrana-fruit-compromete-nuevas-inversiones-para-la-industria-agroalimentaria-de-michoacan/" target="_blank" rel="noopener">michoacan.gob.mx</a></li>
+            <li><b>AGRANA Beteiligungs-AG</b> · Comunicado EQS de resultados anuales 2025|26, 12 de mayo de 2026. Ingresos del grupo −7.9% a 3,237.3 millones de euros; resultado operativo antes de excepcionales +6.2% a 81.2 millones; partidas excepcionales de 74.1 millones incluido deterioro de 46.0 en azúcar; EBIT de 3.2 millones; FBS al 50.9% de los ingresos contra 46.4%. <a href="https://www.agrana.com/fileadmin/inhalte/agrana_group/PR/Presseaussendungen/PA_Jahresbilanz_2025_26.pdf" target="_blank" rel="noopener">agrana.com</a></li>
+            <li><b>AGRANA Beteiligungs-AG</b> · Información privilegiada conforme al artículo 17 MAR, 28 de septiembre de 2026. EBIT de 28.1 millones en Q2 2026|27 (+26.0%); 63.5 millones en el primer semestre contra 28.0; banda de guía anual elevada de 70–90 a 90–110 millones; detalle por segmento previsto para el 8 de octubre de 2026.</li>
+            <li><b>AGRANA Beteiligungs-AG</b> · «AGRANA beabsichtigt Erwerb des Aromenherstellers esarom», 9 de septiembre de 2026. Adquisición del 100% de esarom, fundada en 1946, unos 400 colaboradores, 112 millones de euros de facturación en 2025, valor de empresa de unos 150 millones con múltiplo de 9.0x EBITDA, cierre previsto al inicio del ejercicio 2027|28. Cita de Stephan Büttner sobre ONE AGRANA. Descripción del grupo: 8,400 colaboradores, 50 plantas, 3.2 mil millones de euros, líder mundial en preparados de fruta.</li>
+            <li><b>Diario Oficial de la Federación</b> · Reforma al artículo 123 constitucional, 3 de marzo de 2026, y decreto que reforma la Ley Federal del Trabajo en materia de reducción de jornada, 1 de mayo de 2026. Transitorio Segundo: 48 horas en 2026, 46 en 2027, 44 en 2028, 42 en 2029, 40 en 2030. Transitorio Cuarto: tope de horas extra de 9 semanales en 2026 y 2027. Artículo 132 fracción XXXIV: registro electrónico de jornada. Artículo 994: multas de 250 a 5,000 UMA. Transitorio Quinto: exigibilidad desde el 1 de enero de 2027.</li>
+            <li><b>Ley del Impuesto Especial sobre Producción y Servicios</b>, artículo 2 fracción I incisos G y J · texto vigente 2026. Tasa de 8% a alimentos no básicos con densidad calórica de 275 kcal o más por 100 g, incluidos helados y paletas de hielo, confitería, dulces de frutas, flanes y pudines; cuotas de bebidas saborizadas de 3.0818 pesos por litro con azúcares añadidos y 1.50 con edulcorantes no calóricos desde el 1 de enero de 2026.</li>
+            <li><b>Expansión</b> · «¿Comes papas fritas y pastelitos?, organizaciones proponen subir del 8% al 20% el impuesto que pagas», 1 de septiembre de 2026, y nota sobre la revisión de impuestos saludables para el Paquete Económico 2027, 2 de septiembre de 2026. Propuesta de organizaciones civiles, no norma vigente. <a href="https://expansion.mx/economia/2026/09/01/ieps-impuesto-comida-chatarra-2027-8-20" target="_blank" rel="noopener">expansion.mx</a></li>
+            <li><b>Prensa especializada de industria y de negocios</b> · Apertura de la planta de Döhler en Soyaniquilpan, Estado de México, julio y agosto de 2026: inversión superior a 1,200 millones de pesos, equivalente a unos 60 millones de euros, alrededor de 200 empleos, tecnología declarada como no operada en ningún otro punto de su red global y segunda fase de colorantes naturales. <a href="https://vanguardia-industrial.net/dohler-fortalece-sector-alimentario-con-planta-en-mexico/" target="_blank" rel="noopener">vanguardia-industrial.net</a></li>
+            <li><b>Datos de industria de berries publicados en agosto de 2026 con base en SIAP</b> · Exportación mexicana superior a 715 mil toneladas por cerca de 3,400 millones de dólares en 2025; Michoacán con 29% de la producción nacional; fresa al 54% del volumen; cerca de 80% de lo exportado con destino a Estados Unidos. <a href="https://www.hortidaily.es/article/9865980/mexico-exporta-mas-de-715-000-toneladas-de-berries-y-lidera-mercado-mundial/" target="_blank" rel="noopener">hortidaily.es</a></li>
+            <li><b>AGRANA</b> · Sitio institucional de México y página de plantas de fruta de Norteamérica, consultados en septiembre de 2026. Historia de la sociedad desde 1981 en Zamora como SIASPORT e instalaciones propias en Jacona desde 1990; cinco plantas de fruta en Norteamérica con más de 1,300 personas en conjunto. <a href="https://mx.agrana.com/conoce-agrana/agrana-en-mexico" target="_blank" rel="noopener">mx.agrana.com</a></li>
+            <li><b>Great Place To Work México</b> · Ficha de organización certificada de Agrana Fruit Mexico, 2025. 92% de colaboradores declaran que es un gran lugar para trabajar contra 71% de una organización típica en México. <a href="https://greatplacetowork.com.mx/organizaciones-certificadas/agrana-fruit-mexico-2025/" target="_blank" rel="noopener">greatplacetowork.com.mx</a></li>
+            <li><b>Base de perfiles corporativos EMIS</b> · Ficha de Agrana Fruit México S.A. de C.V., perfil actualizado el 26 de marzo de 2026. Constitución el 27 de noviembre de 1981; 1,168 empleados atribuidos a 2024. Se cita únicamente como uno de los extremos del rango de plantilla.</li>
+            <li><b>Literatura académica y estadística agrícola</b> · Distribución municipal de la producción de fresa en Michoacán con base en SIAP, que ubica a Zamora, Tangancícuaro y Jacona entre los primeros municipios productores; estacionalidad de la cosecha de noviembre a junio con pico en primavera, sobre datos SIAP y FAO.</li>
+          </ol>
+        </div>
+
+        <div class="card top-a">
+          <h3 class="h4">Una nota sobre por qué esta sección es larga</h3>
+          <p class="prose">Porque la mitad del valor de un análisis externo está en saber dónde termina. Todo lo que está aquí se construyó sin hablar con nadie de tu equipo y sin acceso a un solo dato interno. <strong>La otra mitad —la que convierte hipótesis en pesos— solo existe dentro de AGRANA Fruit México</strong>, y esa es exactamente la conversación que proponemos.</p>
+        </div>
+
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA ============================ -->
+<section id="cta" class="view" aria-label="Siguiente paso">
+  <div class="sec">
+    <div class="bar"><div class="bar-in" data-bar></div></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="eyebrow"><span class="n">→</span> Siguiente paso</div>
+        <h1 class="sec-t" tabindex="-1">Cuarenta y cinco minutos para contrastar seis hipótesis</h1>
+      </header>
+
+      <div class="sec-body">
+        <div class="cta-panel">
+          <h2>Queremos una reunión de 45 minutos contigo para poner estas hipótesis a prueba.</h2>
+          <p class="prose">La agenda es simple: te presentamos las seis hipótesis de la sección 11 una por una y tú nos dices cuáles ya tienes resueltas y cuáles no. <strong>Si están mal planteadas, esa información también nos sirve</strong> — y te ahorra un proyecto que no necesitas. Si dos o tres resultan válidas, el siguiente paso natural es un estudio de factibilidad con los siete inputs de la sección 12, que es donde se cuantifica en pesos lo que aquí solo se puede plantear como pregunta. En la misma sesión podemos repasar a detalle los casos de la sección 13, cómo se implementaron y la metodología completa.</p>
+          <p class="prose" style="margin-top:var(--space-4)">Todo proyecto de London Consulting Group tiene retorno sobre la inversión garantizado por contrato en relación 1:1. El promedio histórico de la firma es de 5:1.</p>
+
+          <div class="cta-acts">
+            <a class="cta-a p" href="mailto:leonardo.pimentel@londoncg.mx?subject=AGRANA%20Fruit%20M%C3%A9xico%20%C2%B7%20Contrastar%20las%20seis%20hip%C3%B3tesis%20(45%20min)&amp;body=Leonardo%2C%0A%0ARevis%C3%A9%20el%20an%C3%A1lisis%20que%20prepararon%20para%20AGRANA%20Fruit%20M%C3%A9xico.%20Agendemos%20los%2045%20minutos.%0A%0AAlgunas%20notas%20sobre%20las%20hip%C3%B3tesis%3A%0A%0A">Escribir por correo</a>
+            <a class="cta-a s" href="https://wa.me/523318628273?text=Hola%20Leonardo%2C%20revis%C3%A9%20el%20an%C3%A1lisis%20que%20prepararon%20para%20AGRANA%20Fruit%20M%C3%A9xico%20y%20me%20gustar%C3%ADa%20agendar%20los%2045%20minutos%20para%20contrastar%20las%20hip%C3%B3tesis." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+
+          <div class="sig">
+            <b>Leonardo Pimentel</b>
+            Director de Operaciones · London Consulting Group México<br>
+            <a href="tel:+523318628273">33 1862 8273</a> · <a href="mailto:leonardo.pimentel@londoncg.mx">leonardo.pimentel@londoncg.mx</a>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step"><b>Paso 1</b><h5>Conversación ejecutiva</h5><p>45 minutos. Contraste de las seis hipótesis de la sección 11 y definición de cuáles vale la pena revisar con datos.</p></div>
+          <div class="step"><b>Paso 2</b><h5>Estudio de factibilidad</h5><p>Los siete inputs de la sección 12, con alcance acotado a las hipótesis que sobrevivan a la conversación.</p></div>
+          <div class="step"><b>Paso 3</b><h5>Propuesta de proyecto</h5><p>Oportunidades cuantificadas en pesos, cronograma, inversión y ROI. Si no justifican el proyecto, se dice.</p></div>
+        </div>
+      </div>
+      <div class="sec-foot" data-foot></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  "use strict";
+
+  var SECTIONS = [
+    {id:"s01", n:"01", t:"La tesis",                    d:"Dónde se movió la restricción y cómo se pone a prueba"},
+    {id:"s02", n:"02", t:"Lo que ya está resuelto",     d:"Inventario de lo que AGRANA ya demuestra públicamente"},
+    {id:"s03", n:"03", t:"El mercado cambió",           d:"Jornada, IEPS, precio de la fruta y un entrante nuevo"},
+    {id:"s04", n:"04", t:"AGRANA cambió",               d:"2023–2026: inversión, adquisiciones y voz de la dirección"},
+    {id:"s05", n:"05", t:"De una planta a una red",     d:"Jacona, Zamora y Tangancícuaro en la misma cuenca"},
+    {id:"s06", n:"06", t:"Benchmark competitivo",       d:"Quién está cerca de la fruta y quién del cliente"},
+    {id:"s07", n:"07", t:"Implicaciones de ejecución",  d:"Seis consecuencias de pasar de un sitio a tres"},
+    {id:"s08", n:"08", t:"IA y agentes",                d:"Cuatro decisiones que hoy se toman con información tardía", live:true},
+    {id:"s09", n:"09", t:"Datos y bifurcaciones",       d:"Tres preguntas que cambian el alcance del trabajo"},
+    {id:"s10", n:"10", t:"Outlook 2026–2029",           d:"Escenario base, de aceleración y de presión"},
+    {id:"s11", n:"11", t:"Hipótesis",                   d:"Seis hipótesis formuladas para poder ser refutadas"},
+    {id:"s12", n:"12", t:"Prediagnóstico",              d:"Los siete inputs del Estudio de Factibilidad de LCG"},
+    {id:"s13", n:"13", t:"Casos de éxito",              d:"Panovo, Sun Berries, Los Cerritos y Pinsa, con video"},
+    {id:"s14", n:"14", t:"Método y fuentes",            d:"Clasificación, fuentes y limitaciones declaradas"},
+    {id:"cta", n:"→",  t:"Contrastar la tesis · 45 minutos",
+                       d:"Si alguna de las seis hipótesis está mal planteada, esa información también sirve", cta:true}
+  ];
+
+  /* ---------- índice del hub ---------- */
+  var idx = document.getElementById("idx");
+  SECTIONS.forEach(function(s){
+    var b = document.createElement("button");
+    b.className = "tile" + (s.cta ? " cta" : "") + (s.live ? " live" : "");
+    b.type = "button";
+    b.setAttribute("data-go", s.id);
+    b.innerHTML = '<span class="tile-n">' + s.n + '</span>' +
+                  '<span class="tile-t">' + s.t + '</span>' +
+                  '<span class="tile-d">' + s.d + '</span>';
+    idx.appendChild(b);
+  });
+
+  /* ---------- barras y pies de cada sección ---------- */
+  function idxOf(id){ for (var i=0;i<SECTIONS.length;i++){ if (SECTIONS[i].id===id) return i; } return -1; }
+
+  SECTIONS.forEach(function(s, i){
+    var view = document.getElementById(s.id);
+    if (!view) return;
+    var prev = i > 0 ? SECTIONS[i-1] : null;
+    var next = i < SECTIONS.length-1 ? SECTIONS[i+1] : null;
+
+    var bar = view.querySelector("[data-bar]");
+    if (bar){
+      bar.innerHTML =
+        '<button class="bar-btn" type="button" data-go="hub">Índice</button>' +
+        '<div class="bar-here"><b>' + s.n + '</b> · ' + s.t + '</div>' +
+        '<div class="bar-nav">' +
+          '<button class="bar-btn" type="button" ' + (prev ? 'data-go="'+prev.id+'"' : 'disabled') +
+            ' aria-label="Sección anterior">←</button>' +
+          '<button class="bar-btn" type="button" ' + (next ? 'data-go="'+next.id+'"' : 'disabled') +
+            ' aria-label="Siguiente sección">→</button>' +
+        '</div>';
+    }
+
+    var foot = view.querySelector("[data-foot]");
+    if (foot){
+      foot.innerHTML =
+        '<button class="lnk" type="button" data-go="hub">← Volver al índice</button>' +
+        (next ? '<button class="btn-next" type="button" data-go="'+next.id+'">' + next.t + ' →</button>' : '');
+    }
+  });
+
+  /* ---------- ruteo ---------- */
+  var views = Array.prototype.slice.call(document.querySelectorAll(".view"));
+  var current = "hub";
+
+  function show(id, push){
+    var el = document.getElementById(id);
+    if (!el) { id = "hub"; el = document.getElementById("hub"); }
+    views.forEach(function(v){ v.classList.toggle("is-active", v === el); });
+    current = id;
+    window.scrollTo(0, 0);
+
+    if (push){
+      var hash = (id === "hub") ? "#" : "#" + id;
+      if (window.location.hash !== hash){
+        try { history.pushState({v:id}, "", hash); } catch(e){ window.location.hash = hash; }
+      }
+    }
+
+    var h = el.querySelector("h1[tabindex], .hub-title");
+    if (h && h.focus) { try { h.focus({preventScroll:true}); } catch(e){ h.focus(); } }
+
+    var vid = document.getElementById("panovoVid");
+    if (vid && id !== "s13" && !vid.paused) { vid.pause(); }
+  }
+
+  document.addEventListener("click", function(e){
+    var t = e.target.closest ? e.target.closest("[data-go]") : null;
+    if (!t) return;
+    e.preventDefault();
+    show(t.getAttribute("data-go"), true);
+  });
+
+  window.addEventListener("popstate", function(){
+    show((window.location.hash || "#").replace("#","") || "hub", false);
+  });
+
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && current !== "hub"){ show("hub", true); return; }
+    if (e.target && /^(INPUT|TEXTAREA|SELECT|VIDEO)$/.test(e.target.tagName)) return;
+    var i = idxOf(current);
+    if (i < 0) return;
+    if (e.key === "ArrowRight" && i < SECTIONS.length-1) show(SECTIONS[i+1].id, true);
+    if (e.key === "ArrowLeft"){
+      if (i > 0) show(SECTIONS[i-1].id, true); else show("hub", true);
+    }
+  });
+
+  /* ---------- consola de agentes ---------- */
+  var AGENTS = [
+    {
+      n:"01", short:"Rendimiento comparable",
+      title:"Rendimiento de fruta comparable entre sitios",
+      proceso:"Recepción de fruta, proceso y cierre de orden, hoy en un sitio y pronto en tres.",
+      friccion:"El rendimiento se conoce al cierre y con criterios que cada sitio puede definir a su manera. Para cuando se ve la desviación, la fruta de esa semana ya se procesó.",
+      agente:"Normaliza recepción, orden de producción y merma bajo un mismo catálogo y compara rendimiento por lote, origen, variedad y sitio.",
+      accion:"Marca los lotes que se desvían del estándar mientras la temporada corre y señala si la causa está en el origen, en la variedad o en el turno.",
+      resultado:"Una sola definición de rendimiento para los tres sitios, disponible en días y no en meses.",
+      dato:"Registros de recepción con origen, variedad y grado de entrada; órdenes de producción con merma; y un catálogo maestro de fruta y de producto que sea el mismo en los tres sitios. Si ese catálogo no existe todavía, construirlo es el trabajo, y es más barato antes de que arranquen los sitios nuevos que después."
+    },
+    {
+      n:"02", short:"Recepción en ventana",
+      title:"Asignación de fruta entre sitios durante el pico",
+      proceso:"Decidir, cada día de la temporada, qué fruta entra a qué sitio y en qué orden se procesa.",
+      friccion:"En el pico, la decisión se toma con la información que alcanza: qué llegó, qué cabe y quién tiene gente. La fruta blanda no espera a que se junte el reporte.",
+      agente:"Cruza recepciones previstas, capacidad libre por sitio, personal disponible por turno y estado de las cámaras para proponer asignación del día.",
+      accion:"Sugiere a qué sitio mandar cada entrega y qué orden de proceso minimiza espera de fruta en patio, con la restricción de horas del sitio ya incorporada.",
+      resultado:"Menos tiempo entre corte y proceso durante las semanas que concentran la temporada, que es donde se define el rendimiento del año.",
+      dato:"Programación de cortes o entregas con al menos un día de anticipación, capacidad y ocupación por sitio, y plantilla disponible por turno. Sin visibilidad anticipada de lo que va a llegar, el agente solo describe el pasado."
+    },
+    {
+      n:"03", short:"Secuencia y cambios",
+      title:"Secuenciación de corridas y costo de cambio de receta",
+      proceso:"Programar el orden de las órdenes de producción de la semana entre familias, sabores y clientes.",
+      friccion:"Cada cambio de receta cuesta paro, limpieza y merma de arranque, y ese costo casi nunca está costeado por producto: se absorbe como tiempo de planta. Con más recetas a la medida, el costo crece sin que nadie lo vea crecer.",
+      agente:"Aprende el costo real de cada transición entre productos a partir de la bitácora y propone secuencias que reducen el número y la severidad de los cambios.",
+      accion:"Entrega la secuencia semanal con el costo de cambio explícito y señala qué referencias de bajo volumen están consumiendo capacidad desproporcionada.",
+      resultado:"Capacidad efectiva mayor sin comprar un solo equipo, y un costo de cambio que por fin se puede poner en la cotización.",
+      dato:"Bitácora de producción con hora de inicio y fin por orden, secuencia real ejecutada —no la planeada—, consumo de limpieza y merma de arranque identificada como tal. Si la merma de arranque se contabiliza junta con la merma total, primero hay que separarlas."
+    },
+    {
+      n:"04", short:"Malla de turnos 46 h",
+      title:"Malla de turnos contra el techo legal de 2027",
+      proceso:"Definir turnos, plantilla eventual y cobertura semana por semana a lo largo de la temporada.",
+      friccion:"El perfil de la temporada es muy desigual y el techo de horas deja de ser uniforme: 46 ordinarias y 9 extraordinarias en 2027, 44 en 2028. Ajustar a mano una malla que cumpla y que cubra el pico es un problema que crece con el número de sitios.",
+      agente:"Simula mallas de turnos contra el perfil real de volumen por semana y valida cada escenario contra el calendario legal vigente en ese año.",
+      accion:"Propone combinaciones de turnos y de contratación eventual que cubren el pico dentro del techo, y muestra el costo de cada opción antes de comprometerla.",
+      resultado:"Llegar al 1 de enero de 2027 con la malla decidida y probada, en lugar de descubrir el faltante en la primera semana de temporada alta.",
+      dato:"Doce meses de registro de asistencia por persona y turno, volumen procesado por semana y definición de cobertura mínima por línea. Es el mismo insumo que el registro electrónico de jornada va a exigir de todas formas a partir de esa fecha."
+    }
+  ];
+
+  var list = document.getElementById("agentList");
+  var panel = document.getElementById("agentPanel");
+
+  function paint(i){
+    var a = AGENTS[i];
+    panel.innerHTML =
+      '<h4>' + a.n + ' · ' + a.title + '</h4>' +
+      '<dl class="chain">' +
+        '<div class="chain-s"><dt>Proceso</dt><dd>' + a.proceso + '</dd></div>' +
+        '<div class="chain-s"><dt>Fricción</dt><dd>' + a.friccion + '</dd></div>' +
+        '<div class="chain-s"><dt>Agente</dt><dd>' + a.agente + '</dd></div>' +
+        '<div class="chain-s"><dt>Acción</dt><dd>' + a.accion + '</dd></div>' +
+        '<div class="chain-s"><dt>Resultado</dt><dd>' + a.resultado + '</dd></div>' +
+      '</dl>' +
+      '<dl class="precond"><dt>Condición previa de datos</dt><dd>' + a.dato + '</dd></dl>';
+    Array.prototype.forEach.call(list.children, function(b, j){
+      b.classList.toggle("on", i === j);
+      b.setAttribute("aria-selected", i === j ? "true" : "false");
+    });
+  }
+
+  AGENTS.forEach(function(a, i){
+    var b = document.createElement("button");
+    b.className = "agent-b" + (i === 0 ? " on" : "");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", i === 0 ? "true" : "false");
+    b.innerHTML = '<span class="ab-n">AGENTE ' + a.n + '</span>' + a.short;
+    b.addEventListener("click", function(){ paint(i); });
+    list.appendChild(b);
+  });
+  paint(0);
+
+  /* ---------- respaldo del video ---------- */
+  var vid = document.getElementById("panovoVid");
+  if (vid){
+    vid.addEventListener("error", function(){ fallback(); }, true);
+    window.addEventListener("load", function(){
+      setTimeout(function(){
+        if (vid.networkState === 3 /* NETWORK_NO_SOURCE */) fallback();
+      }, 1200);
+    });
+  }
+  function fallback(){
+    var box = vid ? vid.parentNode : null;
+    if (!box || box.getAttribute("data-fb")) return;
+    box.setAttribute("data-fb", "1");
+    vid.style.display = "none";
+    var p = document.createElement("div");
+    p.className = "vid-fb";
+    p.innerHTML = 'El video no se está cargando desde este servidor. ' +
+      '<a href="assets/panovo-growth-stories.mp4" target="_blank" rel="noopener">Ábrelo en una pestaña nueva</a> ' +
+      'o <a href="mailto:leonardo.pimentel@londoncg.mx?subject=Growth%20Stories%20%C2%B7%20Panovo">pídenos el episodio completo por correo</a>.';
+    box.insertBefore(p, box.firstChild);
+  }
+
+  /* ---------- arranque ---------- */
+  show((window.location.hash || "#").replace("#","") || "hub", false);
+  try { history.replaceState({v:current}, "", window.location.hash || "#"); } catch(e){}
+})();
+</script>
+
+</body>
+</html>
